@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <!-- uncomment below for IE9/10 support -->
+    <script>if(typeof window.Int16Array !== 'function')document.write("<scri"+"pt src='http://localhost:3000/dist/extras/typedarray.min.js'></scr"+"ipt>");</script>
+    <script>document.write("<scri"+"pt src='http://localhost:3000/dist/extras/request_animation_frame.js'></scr"+"ipt>");</script>
+
+    <script src='http://localhost:3000/dist/plotly-basic.js'></script>
+    <style>
+      html, body {
+        margin:0; padding:0;
+      }
+
+      .graph {
+        height: 600px;
+        width: 600px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="graph" id="graph1">
+    </div>
+
+    <script>
+    var graph = {
+      data: [{y:[1,3,6,7,4,3,5,6,7,0,9,5,1,8,4]}],
+      layout: {
+        modebar: {orientation: 'h'},
+        margin: {t:25, b: 25, l:25, r:25}
+      },
+      config: {
+        displayModeBar: 'hover',
+        watermark: true,
+        displaylogo: false
+      }
+    }
+
+    var graph2 = JSON.parse(JSON.stringify(graph))
+    graph2.layout.modebar.orientation = 'v';
+
+    Plotly.plot('graph1',graph).then(function(gd) {
+      window.gd = gd;
+    })
+
+    </script>
+  </body>
+</html>

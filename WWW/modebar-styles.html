@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <script src='http://localhost:3000/build/plotly.js'></script>
+    <style>
+      html, body {
+        margin:0; padding:0;
+      }
+      #grid {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      #grid > div {
+        display:inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+    </div>
+
+    <script>
+    var colors = ["white", "red", "orange",
+      "blue", "black", "purple",
+      "#aaa", "#111", "#333",
+      "yellow", 'green', 'cyan'], gds = [];
+
+    var N=1000, data = [{x:[], y: []}];
+    for (var i = 0; i < N; i++) {
+      data[0].x.push(i);
+      data[0].y.push(Math.sin(2*Math.PI*10/N * i)*i**2);
+    };
+
+    var grid = document.getElementById('grid');
+    for (var i = 1; i <= colors.length; i++) {
+      var gd = document.createElement('div')
+      grid.appendChild(gd);
+
+      Plotly.plot(gd,{
+        data: data,
+        layout: {
+          plot_bgcolor: "transparent",
+          paper_bgcolor: colors[i],
+          modebar: {
+            orientation: "v"
+          },
+          margin: {
+            l: 50, r: 50, t: 50, b: 50
+          }
+        },
+        config: { displayModeBar: true, responsive: false }
+      }).then(function(gd) {
+        gds.push(gd);
+      })
+
+    }
+
+    </script>
+  </body>
+</html>
