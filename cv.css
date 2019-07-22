@@ -1,0 +1,102 @@
+@page {
+    size: auto;
+    margin: 40pt 5pt;
+}
+
+body {
+  background-color: white;
+  font-family: 'Gudea', sans-serif;
+  margin: 5% 15% 5% 15%;
+}
+
+h1 {
+    color: #DF723E;
+    display: inline-block;
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+  color: #DF723E;
+  font-size: .9em;
+  letter-spacing: 2px;
+  margin-top: 3em;
+  margin-bottom: .1em;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #a7a9ab;;
+}
+
+h2 span {
+  color: #58585B;
+  display: inline-block;
+  font-size: .8em;
+  letter-spacing: 3px;
+  margin-bottom: -1%;
+  margin-top: 1.1em;
+  padding-left: .4em;
+  text-transform: uppercase;
+}
+
+h3 {
+    color: #DF723E;
+    font-size: .9em;
+    letter-spacing: 1px;
+    margin-bottom: -1%;
+    text-decoration: none;
+}
+
+h3 span {
+  color: #58585B;
+  display: inline-block;
+  font-size: .8em;
+  letter-spacing: 2px;
+  margin-bottom: -1%;
+  margin-top: 1.1em;
+  padding-left: .4em;
+  text-transform: uppercase;
+}
+
+header aside {
+    color: #808284;
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: .9em;
+    width: 100%;
+}
+
+header aside table {
+    font-size: .8em;
+    width: 49%;
+    float: left;
+}
+
+header aside td {
+    vertical-align: top;
+}
+
+section {
+  color: #808284;
+  font-size: .9em;
+  line-height: 1.4em;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 7%;
+  margin-top: 1em;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+  color: #505067;
+  display: inline-block;
+  text-decoration: none;
+}
+
+hr {
+  border: 1px dotted
+  border-style: none none dotted;
+  margin: 0 10% 0 0;
+}

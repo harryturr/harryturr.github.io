@@ -1,66 +1,413 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="webfonts.css">
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  	<script type="text/javascript" src="bw.js"></script>
-    <title>harrisonn griffin</title>
+<html>
 
-    
+<head>
+  <title> Harrisonn Griffin • Curriculum Vitae</title>
+  <link rel="stylesheet" type="text/css" href="cv.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Gudea" />
+  <meta charset="UTF-8">
+</head>
 
-  </head>
-  <body>
-
-
-    <div id="sidebar">
-
-			<div class="logo-mobile">
-				<hgroup>
-					<h1>harrisonn griffin</h1>
-          <h2>scanning probe microscopy</h2>
-          <h2>griffin <b>dot</b> harrisonn <b>at</b> gmail.com</h2>
-				</hgroup>
-			</div>
-			<div class="menu-main-menu-container">
-        <ul id="navi-main" class="menu">
-          <li id="menu-item-119" class=""><a title="me" href="index.html">me</a></li>
-          <li id="menu-item-119" class=""><a title="research" href="research.html">afm</a></li>
-         <!-- <li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-114"><a title="projects" href="projects.html">projects</a></li> -->
-          <li id="menu-item-113" class=""><a title="git" href="https://github.com/harryturr">git</a></li>
-          <li id="menu-item-156" class="current-menu-item"><a title="cv" href="cv.html">cv.</a></li>
-          <li id="menu-item-112" class=""><a title="blog" href="blog.html">blog</a></li>
-        </ul></div>
-		</div> <!-- sidebar -->
-
-    <div id="content">
-        <div id="adress-box">
+<body>
+  <header>
     <hgroup>
-      <h1>harrisonn griffin</h1>
-      <h2>mcgill university, dept of physics</h2>
+      <h1>Harrisonn Griffin</h1>
     </hgroup>
-    <address>
-      <br>Ernest Rutherford Physics Building,
-      <br>3600 Rue University,
-      <br>Montréal, QC H3A 2T8, Canada
-      <br>T: +1.518. three three eight .5598
-      <br>griffin <b>dot</b> harrisonn <b>at</b> gmail.com
-    </address>
-  </div>
+    <aside>
+      <table>
+        <tr>
+          <td>Telephone</td>
+          <td>+1 518 338 5598</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>griffin.harrisonn@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <address>McGill University<br />3600 Rue University<br />Montreal, Qc, Canada</address>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>GitHub</td>
+          <td><a href="https://github.com/bnordbo">https://github.com/harryturr</a></td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td><a href="https://harrisonngriffin.com">https://harrisonngriffin.com</td>
+        </tr>
+        <tr>
+          <td>LinkedIn</td>
+          <td><a href="https://www.linkedin.com/in/harrisonngriffin">https://www.linkedin.com/in/harrisonngriffin</a></td>
+        </tr>
+      </table>
+    </aside>
+  </header>
+
+  <h2>Summary</h2>
+
+  <section>
+    <p>
+      Physics researcher with considerable experience in 
+      UNIX/Linux, python scripting, and data analysis.
+      Interest in open source software, data visualization, 
+      and reproducible science.
+      Thrives on challenges and learning new technologies and
+      concepts. Experience from academic research and personal
+      projects.
+    </p>
+  </section>
+
+  <h2>Research Experience</h2>
+
+  <h3>02/2018–<i>present</i> | <span>McGill University, Montreal</span></h3>
+
+  <section>
+    <p>
+      <b>Masters student</b> in the Grütter scanning probe microscopy
+      group in the Department of Physics. My research has focused
+      on using a home built low temperature atomic force microscope
+      to study single electron charging events.
+    </p>
+
+    <ul>
+        <li>
+          Encoded all our AWS infrastructure as reusable projects
+          using Terraform. This allows us to do verson control of our
+          infrastructure, and to easily create entire environments.
+        </li>
+        <li>
+          Built a CI/CD pipeline using Jenkins and custom release
+          tooling written in Python, allowing automatic deployment and
+          test of container images.
+        </li>
+        <li>
+          Expanded the mobile message manager with support for
+          fragmented messages for use with our proprietary GGSN.
+        </li>
+        <li>
+          Created a test runner in Java, for building ephemeral
+          CoreOS/fleet clusters using AWS EC2 instances, and then
+          deploying a service stack that smoke tests are run against.
+        </li>
+        <li>
+          Initiated migration from our fleet based distributed
+          scheduler to Kubernetes/Calico.
+        </li>
+      </ul>
+</section>
+
+<h3>08/2016–01/2017 | <span>Concordia University, Montreal</span></h3>
+
+<section>
+  <p>
+    <b>Research assistant</b> in the Champagne research
+    group in the Department of Physics. My research focused
+    on designing and nanofabricating strain transistors out 
+    of single layer graphene.
+  </p>
+
+  <ul>
+      <li>
+          Build Mathematica model to simulate varying strain and 
+          magnetic field on suspended graphene devices. 
+        </li>
+      <li>
+        Microfabrication of monolayer suspended graphene channels via
+        photolithography,e--beam lithography, thermal evaporation, 
+        RIE, wet etching.
+      </li>
+      <li>
+        Characterize devices via optical microscope, 
+        tilted SEM, Raman Spectroscopy.
+      </li>
+      <li>
+        Wire bond and package devices for measurement in He-3 cryostat.
+      </li>
+
+    </ul>
+</section>
+
+<h2>Undergraduate Research Experience | <span>Union College, Schenectady NY</span></h2>
 
 
-    
-  <div class="iframe-container">
-    <iframe src="GriffinCV_Physics.pdf" allowfullscreen></iframe>
-  </div>
-    
- <!--   <iframe src="GriffinCV_Physics.pdf" width="750" height="1000">
-        <p>Your browser does not support iframes.</p>
+<h3>2015-2016 <i>Theses Project</i> | <span>Union College, Schenectady NY</span></h3>
 
-    </iframe>
--->
+<section>
+  <p>
+    <b>Masters student</b> in the Grütter scanning probe microscopy
+    group in the Department of Physics. My research has focused
+    on using a home built low temperature atomic force microscope
+    to study single electron charging events.
+  </p>
+  <ul>
+      <li>
+          Prepare samples of silica nanopores filled with 1-Decanol.
+        </li>
+        <li>
+          Precisely heat and cool sample via Differential 
+          Scanning Calorimeter to measure energy of phase transitions.  
+        </li>
+        <li>
+          Explore and understand the effects of nanoscale 
+          confinement and overnormalization of Heat of Fusion.
+        </li>
+        <li>
+          <i>        
+            Present results at American Physical Society March Meeting.
+          </i>
+        </li>
+      </ul>
 
-  </body>
+</section>
+
+<h3>2015 Summer | <span>McGill University, Montreal</span></h3>
+
+<section>
+  <p>
+    <b>Masters student</b> in the Grütter scanning probe microscopy
+    group in the Department of Physics. My research has focused
+    on using a home built low temperature atomic force microscope
+    to study single electron charging events.
+  </p>
+
+  <ul>
+      <li>
+          Prepare samples of pure aluminum via mechanical polishing,
+          electroploshing, and thermal annealing.
+      </li>
+      <li>
+          Anodize aluminum to create self-ordered array of AAO 
+          nanopores with diameters of 200-300 nm.  
+      </li>
+      <li>
+          Characterize pores via SEM and AFM.
+      </li>
+    </ul>
+</section>
+
+<h3>2014 Summer | <span>McGill University, Montreal</span></h3>
+
+<section>
+  <p>
+    <b>Masters student</b> in the Grütter scanning probe microscopy
+    group in the Department of Physics. My research has focused
+    on using a home built low temperature atomic force microscope
+    to study single electron charging events.
+  </p>
+
+  <ul>
+    <li>
+        Machined aluminum parts and aligned optical components.
+      </li>
+      <li>
+        Successfully trapped 0.5 and 1$\mu m$ polystyrene  beads.  
+      </li>
+      <li>
+        Created programs using MATLAB to control piezoelectric 
+        stage to move particles at precise velocities in different patterns.
+      </li>
+    </ul>
+</section>
+
+  <h2>Professional Experience</h2>
+
+  <h3>04/2017–02/2018 | <span>GLOBALFOUNDRIES, New York</span></h3>
+
+  <section>
+    <p>
+      <b>Process engineer</b> in the contamination free 
+      manufacturing deparment at Fab 8. As a member of the
+      darkfield and electron microscoy defect team, I was 
+      involved in developing automated infrastructure
+      for finding and characterizing defects on process wafers.
+    </p>
+
+    <ul>
+        <li>
+            Train and manage machine learning algorithms and  
+            recipes for automatic defect mage-based classification.
+        </li>
+      <li>
+          Formulate effective inline defect inspection techniques 
+          and recipes on darkfield microscopy and SEM tools.
+      </li>
+      <li>
+          Work with Process Integration and Advance Module 
+          Engineering teams to improve capture rate of 
+          defects of interest.
+      </li>
+      <li>
+        Improve speed and efficiency of existing recipes to
+        increase throughput of wafers through the process line.
+      </li>
+
+    </ul>
+  </section>
+
+
+  <h2>Education and Training</h2>
+
+  <h3>2009 | <span>BGP4 Routing course (two days), Oslo</span></h3>
+
+  <h3>2012 | <span>Management training (one week), Oslo</span></h3>
+
+  <h3>2002 | <span>Juniper ERX and SDX training (two weeks), Westford, MA</span></h3>
+
+  <h3>1997-1998 | <span>Telemark University College, IT studies</span></h3>
+
+  <h3>1994-1997 | <span>Bø High School, general studies</span></h3>
+
+  <h2>Miscellaneous</h2>
+
+  <h3>2016-04-28 | <span>Patent USPTO 62/066,395</span></h3>
+
+  <section>
+    <p>
+      Apparatus for Establishing Real-Time Media Sessions in a
+      Conversation in a Unified and Consistent Multimodal
+      Communication Framework
+    </p>
+  </section>
+
+  <h3>2015-05-02 | <span>Patent USPTO 61/860,222</span></h3>
+
+  <section>
+    <p>
+      A unified communication framework in which multiple users
+      communicate using multiple modes. Conversations are kept
+      consistent across users' devices. A backend maintains the true
+      and authoritative version of the conversation within the
+      communication framework.
+    </p>
+  </section>
+
+  <h3>2001 | <span>Application for <code>.name</code> gTLD</span></h3>
+  <section>
+    <p>
+      Contracted with Global Name Registry to define a stateless
+      registry-registrar protocol as part as the (successful)
+      application for the <code>.name</code> top-level domain.
+    </p>
+  </section>
+
+  <h2>Skills</h2>
+
+  <h3>Programming</h3>
+
+  <section>
+    <p>
+      I have nearly twenty years of programming experience and have
+      enjoyed several programming languages, and like learning new
+      ones. I take pride in writing, and appreciate reading,
+      aesthetically pleasing code.
+    </p>
+
+    <ul>
+      <li>
+        <b>Java</b> is the language I have most professional
+        experience with, and I am quite familiar with its ins and
+        outs, as well as several common tools and frameworks, such
+        as Maven and Dropwizard.
+      </li>
+      <li>
+        <b>Haskell</b> was used almost exclusively in the Wire
+        backend, and I spent the better part of three years learning
+        and getting productive in this marvelous programming
+        language.
+      </li>
+      <li>
+        <b>Python</b> is a language I have been revisiting countless
+        times during my career, and is my go-to language for smaller
+        jobs and prototyping.
+      </li>
+      <li>
+        <b>Rust</b> is becoming one of my favorite languages as I am
+        starting to appreciate its expressiveness, zero-cost
+        abstractions and rich type system.
+      </li>
+      <li>
+        <b>Common Lisp</b> was my favorite language for a long time,
+        and I have worked professionally with it on two occasions.
+      </li>
+      <li>
+        <b>Ruby</b> is a language that caught my attention quite
+        early, and I used it for writing network management systems
+        long before Ruby on Rails was invented.
+      </li>
+      <li>
+        <b>Perl</b> is the first language I used professionally.
+        While I have not used it for a long time, it taught me all I
+        know about regular expressions.
+      </li>
+    </ul>
+  </section>
+
+  <h3>Operational</h3>
+
+  <section>
+    <p>
+      My first full time position was as a system administrator on
+      Solaris, and for the past twenty years I have repeatedly been
+      involved in related tasks.
+    </p>
+
+    <ul>
+      <li>
+        <b>Linux</b> was my desktop operating system for twelve years, and
+        I am still using it on a daily basis on the server side. I
+        have also been exposed to a number of other Unices, such as
+        Solaris, Digital UNIX, FreeBDS, NetBSD and Darwin.
+      </li>
+      <li>
+        <b>TCP/IP</b> has always been very close to my work, be it
+        as a developer of network management systems for large IP
+        networks, or cloud network architecture. Besides the
+        fundamentals, I am familiar with protocols such as DNS,
+        HTTP, SMTP, IMAP4 and GTP.
+      </li>
+      <li>
+        <b>Cloud services</b> is something I have been increasingly
+        involved in, in particular AWS. I have deployed services at
+        scale using Ansible and Chef, and encoded complex
+        environments as code using Terraform.
+      </li>
+      <li>
+        <b>Containerization</b> is a recent topic for me, and lately
+        I have been highly involved in operating containers on
+        CoreOS/fleet, and the migration to Kubernetes/Calico.
+      </li>
+    </ul>
+  </section>
+
+  <h2>Interests</h2>
+
+  <section>
+    <ul>
+      <li>
+        I am fond of cycling, both the athletic and mechanical
+        aspects, as well as collecting funny looking bicycles and
+        volunteering as a bicycle mechanic at an annual even to
+        promote cycling. I also run and practice ju jitsu.
+      </li>
+      <li>
+        Being the owner of a garden and greenhouse, I enjoy tending
+        it and growing my own vegetables.
+      </li>
+      <li>
+        I enjoy programming, in particular the functional style, and
+        frequently find myself tinkering with code in my spare time.
+        I also try to pass on this passion to the next generation by
+        volunteering at our local Code Club.
+      </li>
+      <li>
+        I like yeast, consequently I both brew my own beer and bake
+        my own bread.
+      </li>
+    </ul>
+  </section>
+</body>
+
 </html>

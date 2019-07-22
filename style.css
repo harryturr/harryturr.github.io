@@ -551,3 +551,18 @@ Media Queries
 .iframe-container-4x3 {
   padding-top: 75%;
 }
+
+
+/* For desktop: */
+@media only screen and (min-width: 800px) {
+  .col-1 {width: 20%;}
+  .col-2 {width: 40%;}
+  .col-3 {width: 60%;}
+  .col-4 {width: 80%;}
+  .col-5 {width: 100%;}
+  
+  .col-6 {width: 28%;}
+  .col-7 {width: 72%;}
+
+  .col-50 {width: 50%;}
+}
