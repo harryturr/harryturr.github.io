@@ -3,6 +3,10 @@
     margin: 40pt 5pt;
 }
 
+.boxed {
+  border: 1px solid green ;
+} 
+
 body {
   background-color: white;
   font-family: 'Gudea', sans-serif;
