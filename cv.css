@@ -7,6 +7,11 @@
   border: 1px solid green ;
 } 
 
+ul {
+  font-size: .9em;
+
+} 
+
 body {
   background-color: white;
   font-family: 'Gudea', sans-serif;
