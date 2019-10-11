@@ -86,59 +86,67 @@
                     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                 </head>
 
-                <h2>Citations of Nobel Prize Papers | <span>2019 Oct 10</span></h2>
+                <h2>Learning a language from subtitles | <span>2019 Oct 10</span></h2>
                 <button type="button" class="collapsible">
-                    How many citations have select nobel prize PRL papers have according to different sources?
+                    Can I become conversationally fluent in a language by just learning 
+                    the most frequent words in a well known tv series' subtitles?
                 </button>
                 <div class="content_button">
 
                     <p class="blog_text">
-                        Maybe I can have some text here.
+                        I have been wanting to learn Norwegian so that I can talk with my friends, family,
+                        and eventually be able to move to Norway! However, I was not finding books or online 
+                        courses to successful. 
                         <ul class="blog_text">
                             <li>I can describe steps here.</li>
-                            <li>Link to relevant github repo.</li>
-                            <li>And if it is longer make a separate page.</li>
+                            <li>Bash scripts for parsing and analyzing data here in code block.</li>
+                            <li>quickly describe results here.</li>
                         </ul>
                     </p>
-                    <div id="myDiv">
-                        <!-- Plotly chart will be drawn inside this DIV -->
-                    </div>
-
-                    <script>
-                        var trace1 = {
-                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                            y: [618, 6593, 1321, 4578, 6355, 45109],
-                            name: 'Google Scholar',
-                            type: 'bar'
-                        };
-
-                        var trace2 = {
-                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                            y: [312, 3315, 413, 2766, 2820, 32865],
-                            name: 'Web of Science',
-                            type: 'bar'
-                        };
-
-                        var trace3 = {
-                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                            y: [240, 2458, 347, 2181, 2841, 0],
-                            name: 'APS',
-                            type: 'bar'
-                        };
-
-                        var data = [trace1, trace2, trace3];
-                        var layout = {
-                            barmode: 'group'
-                        };
+                  </div>
 
 
-                        Plotly.newPlot('myDiv', data, layout, {
-                            responsive: true
-                        }, {
-                            showSendToCloud: true
-                        }, );
-                    </script>
-                </div>
+
+        <div id="language_plot" style="width: 100%; height: 100%;" class="plotly-graph-div"></div>
+
+
+
+                  <script type="text/javascript">
+                    (function(){
+                        window.PLOTLYENV={'BASE_URL': 'https://plot.ly'};
+        
+                        var gd = document.getElementById('language_plot')
+                        var resizeDebounce = null;
+        
+                        function resizePlot() {
+                            var bb = gd.getBoundingClientRect();
+                            Plotly.relayout(gd, {
+                                width: bb.width,
+                                height: bb.height
+                            });
+                        }
+        
+                        
+                        window.addEventListener('resize', function() {
+                            if (resizeDebounce) {
+                                window.clearTimeout(resizeDebounce);
+                            }
+                            resizeDebounce = window.setTimeout(resizePlot, 100);
+                        });
+                        
+        
+                        
+                        Plotly.plot(gd, {
+                            data: [{"meta": {"columnNames": {"x": "x", "y": "y"}}, "mode": "lines", "type": "scatter", "xsrc": "griffin.harrisonn:0:d6e423", "x": [0.7849293563579351, 1.569858712715856, 3.924646781789633, 7.84929356357928, 14.12872841444269, 24.332810047095762, 32.18210361067504, 40.03139717425431, 56.514913657770805, 81.6326530612245, 102.04081632653062, 128.72841444270017, 154.63108320251177, 172.68445839874408, 191.52276295133436, 212.7158555729984, 233.90894819466246, 258.24175824175825, 291.99372056514915, 324.1758241758242, 370.4866562009419, 418.3673469387755, 461.5384615384615, 509.41915227629516, 563.5792778649923, 596.5463108320253, 640.5023547880692, 687.5981161695448, 758.2417582417584, 798.2731554160126, 870.486656200942, 919.9372056514915, 952.9042386185243, 1000.0000000000001], "ysrc": "griffin.harrisonn:0:f41e4d", "y": [4.695431472081211, 10.025380710659888, 17.766497461928935, 24.11167512690355, 30.964467005076145, 39.720812182741106, 44.035532994923855, 47.84263959390863, 53.04568527918781, 58.37563451776649, 61.80203045685278, 65.10152284263958, 67.38578680203045, 68.52791878172587, 69.54314720812182, 70.55837563451776, 71.44670050761421, 72.46192893401015, 73.60406091370558, 74.61928934010152, 75.88832487309644, 77.03045685279187, 77.91878172588832, 78.80710659898477, 79.69543147208121, 80.20304568527918, 80.83756345177665, 81.4720812182741, 82.23350253807106, 82.74111675126903, 83.37563451776649, 83.88324873096447, 84.13705583756345, 84.51776649746192], "visible": true}, {"line": {"dash": "dash"}, "meta": {"columnNames": {"x": "x", "y": "C"}}, "mode": "lines", "type": "scatter", "xsrc": "griffin.harrisonn:0:d6e423", "x": [0.7849293563579351, 1.569858712715856, 3.924646781789633, 7.84929356357928, 14.12872841444269, 24.332810047095762, 32.18210361067504, 40.03139717425431, 56.514913657770805, 81.6326530612245, 102.04081632653062, 128.72841444270017, 154.63108320251177, 172.68445839874408, 191.52276295133436, 212.7158555729984, 233.90894819466246, 258.24175824175825, 291.99372056514915, 324.1758241758242, 370.4866562009419, 418.3673469387755, 461.5384615384615, 509.41915227629516, 563.5792778649923, 596.5463108320253, 640.5023547880692, 687.5981161695448, 758.2417582417584, 798.2731554160126, 870.486656200942, 919.9372056514915, 952.9042386185243, 1000.0000000000001], "ysrc": "griffin.harrisonn:0:7fc243", "y": ["50", 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50], "visible": true, "stackgroup": null}, {"line": {"dash": "dash"}, "meta": {"columnNames": {"x": "x", "y": "D"}}, "mode": "lines", "name": "trace 2", "type": "scatter", "xsrc": "griffin.harrisonn:0:d6e423", "x": [0.7849293563579351, 1.569858712715856, 3.924646781789633, 7.84929356357928, 14.12872841444269, 24.332810047095762, 32.18210361067504, 40.03139717425431, 56.514913657770805, 81.6326530612245, 102.04081632653062, 128.72841444270017, 154.63108320251177, 172.68445839874408, 191.52276295133436, 212.7158555729984, 233.90894819466246, 258.24175824175825, 291.99372056514915, 324.1758241758242, 370.4866562009419, 418.3673469387755, 461.5384615384615, 509.41915227629516, 563.5792778649923, 596.5463108320253, 640.5023547880692, 687.5981161695448, 758.2417582417584, 798.2731554160126, 870.486656200942, 919.9372056514915, 952.9042386185243, 1000.0000000000001], "ysrc": "griffin.harrisonn:0:878df3", "y": ["85", 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85]}],
+                            layout: {"xaxis": {"type": "linear", "range": [0.7849293563579351, 1000.0000000000001], "title": {"text": "most frequent words"}, "autorange": true}, "yaxis": {"type": "linear", "range": [0.2340665538634994, 89.46136491821771], "title": {"text": "percentage of total words"}, "autorange": true}, "autosize": true, "showlegend": false},
+                        });
+                        
+                   }());
+                </script>
+
+
+
+   
             </body>
 
 <!-- ################################################################################ -->
@@ -159,13 +167,14 @@
                         Since it is the week of the Nobel Prize announcements, I thought it might be nice to reflect on 
                         some of the more famous Physics Review Letters articles whose work eventually led to a Nobel Prize.
                         <ul class="blog_text">
-                            <li>I can describe steps here.</li>
-                            <li>Link to relevant github repo.</li>
-                            <li>And if it is longer make a separate page.</li>
+                            <li>Quote from Gervais about PRL.</li>
+                            <li>Why PRL is good.</li>
+                            <li>Why discrepancy in data sources.</li>
                         </ul>
                     </p>
-                  
-                    <div id="myDiv2" class = "plotly_plot">
+                  </div>
+
+                    <div id="myDiv2" >
                         <!-- Plotly chart will be drawn inside this DIV -->
                     </div>
 
@@ -203,7 +212,6 @@
                             showSendToCloud: true
                         }, );
                     </script>
-                </div>
             </body>
 
             <script>
@@ -224,42 +232,5 @@
             </script>
 
         </body>
-        <div id="myDiv3" class = "plotly_plot">
-            <!-- Plotly chart will be drawn inside this DIV -->
-        </div>
-
-        <script>
-            var trace1 = {
-                x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                y: [618, 6593, 1321, 4578, 6355, 45109],
-                name: 'Google Scholar',
-                type: 'bar'
-            };
-
-            var trace2 = {
-                x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                y: [312, 3315, 413, 2766, 2820, 32865],
-                name: 'Web of Science',
-                type: 'bar'
-            };
-
-            var trace3 = {
-                x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
-                y: [240, 2458, 347, 2181, 2841, 0],
-                name: 'APS',
-                type: 'bar'
-            };
-
-            var data = [trace1, trace2, trace3];
-            var layout = {
-                barmode: 'group'
-            };
-
-
-            Plotly.newPlot('myDiv3', data, layout, {
-                responsive: true
-            }, {
-                showSendToCloud: true
-            }, );
-        </script>
+      
 </html>

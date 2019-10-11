@@ -154,7 +154,7 @@ hr {
   color: #808284;
   display: inline-block;
   letter-spacing: 1px;
-  line-height: .9em;
+  line-height: 1.2em;
   width: 90%;
   font-size: 15px;
   padding: 18px;
@@ -162,4 +162,17 @@ hr {
 
 .plotly_plot {
   width: 95%;
+}
+
+#myDiv {
+  margin: 0 auto;
+  border: 0px solid black;
+  height: 50vh;
+  min-height: 30px;
+}
+#myDiv2 {
+  margin: 0 auto;
+  border: 0px solid black;
+  height: 50vh;
+  min-height: 30px;
 }
