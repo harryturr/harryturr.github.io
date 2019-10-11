@@ -376,3 +376,13 @@ input[type='checkbox'] {
   border-bottom-right-radius: 7px;
   padding: .5rem 1rem;
 }
+
+.index_text {
+  color: #808284;
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  width: 90%;
+  font-size: 15px;
+  padding: 0px;
+}
