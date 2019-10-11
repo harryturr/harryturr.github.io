@@ -1,99 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="webfonts.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-  	<script type="text/javascript" src="bw.js"></script>
+    <script type="text/javascript" src="bw.js"></script>
     <title>harrisonn griffin</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
 
-  </head>
-  
+
+</head>
+
 
 <head>
     <title> Harrisonn Griffin</title>
     <link rel="stylesheet" type="text/css" href="cv.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Gudea" />
     <meta charset="UTF-8">
-  </head>
+</head>
+
 
 <body>
 
 
-  <div id="sidebar">
+    <div id="sidebar">
 
-    <div class="logo-mobile">
-      <hgroup>
-        <h1>harrisonn griffin</h1>
-        <div class = description>
-         <address>
-            <br>mcgill university, dept of physics
-            <br>grutter research group
-            <br>montréal, qc, canada
-            <br>griffin <b>dot</b> harrisonn <b>at</b> gmail.com
-        </address>
-      </div>
-    </hgroup>
-    </div>
-    <div class="menu-main-menu-container">
-      <ul id="navi-main" class="a">
-        <li 
-          >
-          <a title="me" href="index.html">me</a></li>
-        <li ><a
-            title="research" href="research.html">afm</a></li>
-        <li ><a
-            title="git" href="https://github.com/harryturr">git</a></li>
-        <li ><a
-            title="cv" href="cv.html">cv</a></li>
-        <li class="current-menu-item"><a
-            title="blog" href="blog.html">blog.</a></li>
-      </ul>
-    </div>
-  </div> <!-- sidebar -->
+        <div class="logo-mobile">
+            <hgroup>
+                <h1>harrisonn griffin</h1>
+                <div class=description>
+                    <address>
+                        <br>mcgill university, dept of physics
+                        <br>grutter research group
+                        <br>montréal, qc, canada
+                        <br>griffin <b>dot</b> harrisonn <b>at</b> gmail.com
+                    </address>
+                </div>
+            </hgroup>
+        </div>
+        <div class="menu-main-menu-container">
+            <ul id="navi-main" class="a">
+                <li>
+                    <a title="me" href="index.html">me</a></li>
+                <li><a title="research" href="research.html">afm</a></li>
+                <li><a title="git" href="https://github.com/harryturr">git</a></li>
+                <li><a title="cv" href="cv.html">cv</a></li>
+                <li class="current-menu-item"><a title="blog" href="blog.html">blog.</a></li>
+            </ul>
+        </div>
+    </div> <!-- sidebar -->
 
 
 
-  <div id="content">
-    <div id="adress-box">
-        <div class = description>
+    <div id="content">
+        <div id="adress-box">
+            <div class=description>
 
-      <h1>harrisonn griffin</h1>
-      <address>
-       <br>mcgill university, dept of physics
-       <br>grutter research group
-       <br>montréal, qc, canada
-       <br>griffin <b>dot</b> harrisonn <b>at</b> gmail.com
-     </address>
-     </div>
-    </div>
+                <h1>harrisonn griffin</h1>
+                <address>
+                    <br>mcgill university, dept of physics
+                    <br>grutter research group
+                    <br>montréal, qc, canada
+                    <br>griffin <b>dot</b> harrisonn <b>at</b> gmail.com
+                </address>
+            </div>
+        </div>
+
+        </head>
+
+        <body>
+<!-- ################################################################################ -->
 
 
-    <!-- <left><img src="profile_pic.jpg" alt="harrisonn griffin"></left> -->
-    <head>
-        <!-- Plotly.js -->
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    </head>
-    
-    <body>
-      
-        
-        <h2>Citations of Nobel Prize Papers | <span>2019 Oct 10</span></h2>
-  
-        <body>Maybe I can have some text here.</body>
-        <ul>
-          <li>I can describe steps here.</li>
-          <li>Link to relevant github repo.</li>
-          <li>And if it is longer make a separate page.</li>
-        </ul>
-        <div id="myDiv">
+
+            <body>
+                <head>
+                    <!-- Plotly.js -->
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                </head>
+
+                <h2>Citations of Nobel Prize Papers | <span>2019 Oct 10</span></h2>
+                <button type="button" class="collapsible">
+                    How many citations have select nobel prize PRL papers have according to different sources?
+                </button>
+                <div class="content_button">
+
+                    <p class="blog_text">
+                        Maybe I can have some text here.
+                        <ul class="blog_text">
+                            <li>I can describe steps here.</li>
+                            <li>Link to relevant github repo.</li>
+                            <li>And if it is longer make a separate page.</li>
+                        </ul>
+                    </p>
+                    <div id="myDiv">
+                        <!-- Plotly chart will be drawn inside this DIV -->
+                    </div>
+
+                    <script>
+                        var trace1 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [618, 6593, 1321, 4578, 6355, 45109],
+                            name: 'Google Scholar',
+                            type: 'bar'
+                        };
+
+                        var trace2 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [312, 3315, 413, 2766, 2820, 32865],
+                            name: 'Web of Science',
+                            type: 'bar'
+                        };
+
+                        var trace3 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [240, 2458, 347, 2181, 2841, 0],
+                            name: 'APS',
+                            type: 'bar'
+                        };
+
+                        var data = [trace1, trace2, trace3];
+                        var layout = {
+                            barmode: 'group'
+                        };
+
+
+                        Plotly.newPlot('myDiv', data, layout, {
+                            responsive: true
+                        }, {
+                            showSendToCloud: true
+                        }, );
+                    </script>
+                </div>
+            </body>
+
+<!-- ################################################################################ -->
+
+            <body>
+                <head>
+                    <!-- Plotly.js -->
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                </head>
+
+                <h2>Citations of Nobel Prize Papers | <span>2019 Oct </span></h2>
+                <button type="button" class="collapsible">
+                    How many citations have select nobel prize PRL papers have according to different sources?
+                </button>
+                <div class="content_button">
+
+                    <p class="blog_text">
+                        Since it is the week of the Nobel Prize announcements, I thought it might be nice to reflect on 
+                        some of the more famous Physics Review Letters articles whose work eventually led to a Nobel Prize.
+                        <ul class="blog_text">
+                            <li>I can describe steps here.</li>
+                            <li>Link to relevant github repo.</li>
+                            <li>And if it is longer make a separate page.</li>
+                        </ul>
+                    </p>
+                  
+                    <div id="myDiv2" class = "plotly_plot">
+                        <!-- Plotly chart will be drawn inside this DIV -->
+                    </div>
+
+                    <script>
+                        var trace1 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [618, 6593, 1321, 4578, 6355, 45109],
+                            name: 'Google Scholar',
+                            type: 'bar'
+                        };
+
+                        var trace2 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [312, 3315, 413, 2766, 2820, 32865],
+                            name: 'Web of Science',
+                            type: 'bar'
+                        };
+
+                        var trace3 = {
+                            x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
+                            y: [240, 2458, 347, 2181, 2841, 0],
+                            name: 'APS',
+                            type: 'bar'
+                        };
+
+                        var data = [trace1, trace2, trace3];
+                        var layout = {
+                            barmode: 'group'
+                        };
+
+
+                        Plotly.newPlot('myDiv2', data, layout, {
+                            responsive: true
+                        }, {
+                            showSendToCloud: true
+                        }, );
+                    </script>
+                </div>
+            </body>
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content_button = this.nextElementSibling;
+                        if (content_button.style.display === "block") {
+                            content_button.style.display = "none";
+                        } else {
+                            content_button.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+        </body>
+        <div id="myDiv3" class = "plotly_plot">
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
 
@@ -104,34 +235,31 @@
                 name: 'Google Scholar',
                 type: 'bar'
             };
-    
+
             var trace2 = {
                 x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
                 y: [312, 3315, 413, 2766, 2820, 32865],
                 name: 'Web of Science',
                 type: 'bar'
             };
-    
+
             var trace3 = {
                 x: ['He3', 'STM', 'Transitor', 'QH', 'FQH', 'Graphene'],
                 y: [240, 2458, 347, 2181, 2841, 0],
                 name: 'APS',
                 type: 'bar'
             };
-    
+
             var data = [trace1, trace2, trace3];
             var layout = {
                 barmode: 'group'
             };
-    
-    
-            Plotly.newPlot('myDiv', data, layout, {
+
+
+            Plotly.newPlot('myDiv3', data, layout, {
                 responsive: true
             }, {
                 showSendToCloud: true
             }, );
         </script>
-    </body> 
-  
-  </body>
 </html>
