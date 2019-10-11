@@ -301,12 +301,7 @@ input[type='checkbox'] {
   height: 50vh;
   min-height: 30px;
 }
-#myDiv2 {
-  margin: 0 auto;
-  border: 0px solid black;
-  height: 50vh;
-  min-height: 30px;
-}
+
 
 
 .wrap-collabsible {
