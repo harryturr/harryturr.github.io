@@ -50,7 +50,7 @@ a {
 a:hover,
 .current-menu-item a,
 .current-menu-parent a {
-  color: #00ff00;
+  color: #DF723E;
   -moz-transition: all 0.1s linear;
   -webkit-transition: all 0.1s linear;
   -ms-transition: all 0.1s linear;
@@ -568,3 +568,4 @@ Media Queries
 
   .col-50 {width: 50%;}
 }
+
