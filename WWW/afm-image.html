@@ -58,7 +58,7 @@
         var channel = response.data
         var arr = channel.data
         var newArr = [];
-        while(arr.length) newArr.push(arr.splice(0,256));
+        while(arr.length) newArr.push(arr.splice(0,512));
 
         var p = [
           Plotly.newPlot(gd,[{type: 'surface', z: newArr}], {
