@@ -61,7 +61,7 @@
         while(arr.length) newArr.push(arr.splice(0,256));
 
         var p = [
-          Plotly.newPlot(gd,[{type: 'surface', z: newArr, colorscale: 'Greys'}], {
+          Plotly.newPlot(gd,[{type: 'surface', z: newArr}], {
             title: channel.title,
             margin: margin,
             xaxis: {
@@ -89,7 +89,7 @@
     }
     getImageInfo('image.json')
     plotChannel('gd1', './channel/sams_23April/channel0.json')
-    plotChannel('gd2', './channel/sams_23April/channel2.json')
+    plotChannel('gd2', './channel/sams_23April/channel1.json')
     </script>
   </body>
 </html>
