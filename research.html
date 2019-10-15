@@ -143,11 +143,10 @@
     </style>
   </head>
   <body>
-    <h1 id="title">afm image</h1>
+    <h3 id="title">SAMS AFM IMAGE</h1>
     <button onclick="restyle()">Restyle</button>
-    <div id="grid">
+    <div id="grid" class = "index_text">
       <div id="gd1"></div>
-      <div id="gd2"></div>
     </div>
 
     <script>
@@ -158,7 +157,6 @@
       if(window.toggle) newTraceType='heatmap'
       if(!window.toggle) newTraceType='surface'
       Plotly.restyle('gd1','type', newTraceType)
-      Plotly.restyle('gd2','type', newTraceType)
     }
     function getImageInfo(imageUrl) {
       axios.get(imageUrl)
@@ -206,7 +204,6 @@
     }
     getImageInfo('image.json')
     plotChannel('gd1', './WWW/channel/sams_23April/channel0.json')
-    plotChannel('gd2', './WWW/channel/sams_23April/channel1.json')
     </script>
   </body>
     </div>
