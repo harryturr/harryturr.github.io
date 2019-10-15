@@ -296,6 +296,16 @@ input[type='checkbox'] {
   padding: 18px;
 }
 
+.code_text {
+  color: #808284;
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  width: 90%;
+  font-size: 15px;
+  padding: 0px;
+}
+
 .plotly_plot {
   width: 95%;
 }
@@ -366,7 +376,7 @@ input[type='checkbox'] {
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 2000px;
+  max-height: 5000px;
 }
 
 .toggle:checked + .lbl-toggle {
@@ -390,4 +400,35 @@ input[type='checkbox'] {
   width: 90%;
   font-size: 15px;
   padding: 0px;
+}
+
+
+
+.img-comp-container {
+  position: relative;
+  height: 400px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
 }

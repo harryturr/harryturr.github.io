@@ -97,17 +97,79 @@
                     <div class="collapsible-content">
                         <div class="content-inner">
 
+                            <h3>BACKGROUND</h3>
 
                             <p class="blog_text">
                                 I have been wanting to learn Norwegian so that I can talk with my friends, family,
                                 and eventually be able to move to Norway! However, I was not finding books or online
                                 courses to successful.
-                                <ul class="blog_text">
-                                    <li>I can describe steps here.</li>
-                                    <li>Bash scripts for parsing and analyzing data here in code block.</li>
-                                    <li>quickly describe results here.</li>
-                                </ul>
                             </p>
+                            <p class="blog_text">
+                                I started wondering, <b> many unique words</b> do I actually need to know in order to be
+                                <b>conversationally fluent</b> in the language? In order to find out, I would need to:
+                            </p>
+                            <ul class="b">
+                                <li>Find a large data set of conversational Norwegian.</li>
+                                <li>Analyze word frequency.</li>
+                                <li>Determine what level would make me "conversationally fluent".</li>
+                            </ul>
+                            <p class="blog_text">
+
+                                One of the most accessible means of casual conversational language, I thought, could
+                                come from television. Since many Norwegians like American series, I decided to look into
+                                one of the most famous casual sitcoms ever made; Friends. I never watched the show, but
+                                I have Norwegian friends that do! With 236 episodes, I think we could make a big enough
+                                data
+                                set to look at common casual words.
+                            </p>
+
+                            <h3>THE DATA</h3>
+                            <p class="blog_text">
+                                First step was gathering my data set. Since this show was widely available with
+                                subtitles, it
+                                was easy enough to <s>find a download with all the files</s> have my Norwegian friends
+                                translate
+                                and timestamp all 5192 minutes (3.6 days).
+                            </p>
+
+                            <p class="blog_text">
+                                First thing to do is look at the actual structure of the text files. We see that they are formatted as follows:
+                            </p>
+
+                            <pre>
+                                 
+    <code class = "code_text">
+Number of subtitle. 
+Time stamp of subtitle .
+Text.
+
+11
+00:00:57,160 --> 00:01:03,554
+-Jeg må prate med deg.
+-Jeg må faktisk prate med deg også.
+            
+    </code>
+    </pre>
+                            
+
+
+                            <pre>
+    <code class = "code_text">
+1  cat ~/friendsAllSeasons/* | 
+2  grep -v '^[0-9]' | 
+3  sed 's/[?!.|]/ /g' | 
+4  sed 's/ * / /g' | 
+5  sed "s/[^A-Za-z\' ]//g" | 
+6  sed 's/^ //g' | 
+7  sed 's/ /\n/g' | 
+8  sed '/^$/d' | 
+9  sed -e 's/\(.*\)/\L\1/' | 
+10 sort | 
+11 uniq -c | 
+12 sort -rn | 
+13 sed -e 's/^[ \t]*//' > all_data.csv
+    </code>
+    </pre>
 
                             <div id="language_plot" style="width: 100%; height: 100%;"></div>
 
@@ -405,5 +467,325 @@
           });
         });</script>
  -->
+
+                <script>
+                    function initComparisons() {
+                        var x, i;
+                        /*find all elements with an "overlay" class:*/
+                        x = document.getElementsByClassName("img-comp-overlay");
+                        for (i = 0; i < x.length; i++) {
+                            /*once for each "overlay" element:
+                            pass the "overlay" element as a parameter when executing the compareImages function:*/
+                            compareImages(x[i]);
+                        }
+
+                        function compareImages(img) {
+                            var slider, img, clicked = 0,
+                                w, h;
+                            /*get the width and height of the img element*/
+                            w = img.offsetWidth;
+                            h = img.offsetHeight;
+                            /*set the width of the img element to 50%:*/
+                            img.style.width = (w / 2) + "px";
+                            /*create slider:*/
+                            slider = document.createElement("DIV");
+                            slider.setAttribute("class", "img-comp-slider");
+                            /*insert slider*/
+                            img.parentElement.insertBefore(slider, img);
+                            /*position the slider in the middle:*/
+                            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                            /*execute a function when the mouse button is pressed:*/
+                            slider.addEventListener("mousedown", slideReady);
+                            /*and another function when the mouse button is released:*/
+                            window.addEventListener("mouseup", slideFinish);
+                            /*or touched (for touch screens:*/
+                            slider.addEventListener("touchstart", slideReady);
+                            /*and released (for touch screens:*/
+                            window.addEventListener("touchstop", slideFinish);
+
+                            function slideReady(e) {
+                                /*prevent any other actions that may occur when moving over the image:*/
+                                e.preventDefault();
+                                /*the slider is now clicked and ready to move:*/
+                                clicked = 1;
+                                /*execute a function when the slider is moved:*/
+                                window.addEventListener("mousemove", slideMove);
+                                window.addEventListener("touchmove", slideMove);
+                            }
+
+                            function slideFinish() {
+                                /*the slider is no longer clicked:*/
+                                clicked = 0;
+                            }
+
+                            function slideMove(e) {
+                                var pos;
+                                /*if the slider is no longer clicked, exit this function:*/
+                                if (clicked == 0) return false;
+                                /*get the cursor's x position:*/
+                                pos = getCursorPos(e)
+                                /*prevent the slider from being positioned outside the image:*/
+                                if (pos < 0) pos = 0;
+                                if (pos > w) pos = w;
+                                /*execute a function that will resize the overlay image according to the cursor:*/
+                                slide(pos);
+                            }
+
+                            function getCursorPos(e) {
+                                var a, x = 0;
+                                e = e || window.event;
+                                /*get the x positions of the image:*/
+                                a = img.getBoundingClientRect();
+                                /*calculate the cursor's x coordinate, relative to the image:*/
+                                x = e.pageX - a.left;
+                                /*consider any page scrolling:*/
+                                x = x - window.pageXOffset;
+                                return x;
+                            }
+
+                            function slide(x) {
+                                /*resize the image:*/
+                                img.style.width = x + "px";
+                                /*position the slider:*/
+                                slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                            }
+                        }
+                    }
+                </script>
+                </head>
+
+                <body>
+
+
+                    <h2>Restoring a 1978 VW Camper Bus | <span>2011 - 2018 </span></h2>
+                    <br>
+                    <div class="wrap-collabsible">
+                        <input id="collapsible3" class="toggle" type="checkbox" unchecked>
+                        <label for="collapsible3" class="lbl-toggle"> How many citations have select nobel prize PRL
+                            papers
+                            have according to different sources?
+                        </label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+
+
+                                <p class="blog_text">
+                                    I just took my 1978 Volkswagen Camper Bus to a car show today during the
+                                    Canadian Thanksgiving long weekend, so I thought it would be a great time to
+                                    reflect quickly on my 7 year restoration project!
+                                    <ul class="blog_text">
+                                        <li>Why I bought it</li>
+                                        <li>Brief overview of what I did.</li>
+                                        <li>Some things I learned along the way.</li>
+                                    </ul>
+                                </p>
+
+                                <!-- 
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="./images/vw/new.png" width="500">
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="./images/vw/old.png" width="500" >
+          </div>
+        </div> -->
+
+                                <body>
+
+                                    <figure class="cd-image-container">
+                                        <img src="images/vw/new.png" alt="Original Image">
+                                        <span class="cd-image-label" data-type="original">Original</span>
+
+                                        <div class="cd-resize-img">
+                                            <!-- the resizable image on top -->
+                                            <img src="images/vw/old.png" alt="Modified Image">
+                                            <span class="cd-image-label" data-type="modified">Modified</span>
+                                        </div>
+
+                                        <span class="cd-handle"></span>
+                                    </figure> <!-- cd-image-container -->
+                                    <script src="js/jquery-2.1.1.js"></script>
+                                    <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+                                    <script src="js/main.js"></script> <!-- Resource jQuery -->
+                                </body>
+
+
+                                <!-- 
+        <script>
+        /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+        initComparisons();
+        </script> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <body>
+
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+                            <!-- <link rel="stylesheet" href="css/reset.css"> -->
+                            <!-- CSS reset -->
+                            <link rel="stylesheet" href="css/slider.css"> <!-- Resource style -->
+                            <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+                        </head>
+
+                    </body>
+                </body>
+
+
+                <body>
+
+                    <head>
+                        <!-- Plotly.js -->
+                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                    </head>
+
+                    <h2>Is the IBM model m the best keyboard? | <span>October 2019 </span></h2>
+                    <br>
+                    <div class="wrap-collabsible">
+                        <input id="collapsible4" class="toggle" type="checkbox" unchecked>
+                        <label for="collapsible4" class="lbl-toggle"> Force curves of the famous
+                            model m show why it provides one of the greatest typing experiences.
+                        </label>
+                        <div class="collapsible-content">
+                            <div class="content-inner">
+
+
+                                <p class="blog_text">
+                                    Since it is the week of the Nobel Prize announcements, I thought it might be nice to
+                                    reflect on
+                                    some of the more famous Physics Review Letters articles whose work eventually led to
+                                    a
+                                    Nobel Prize.
+                                    <ul class="blog_text">
+                                        <li>Quote from Gervais about PRL.</li>
+                                        <li>Why PRL is good.</li>
+                                        <li>Why discrepancy in data sources.</li>
+                                    </ul>
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- ################################################################################ -->
+
+
+
+
+
+
+                    <!--   
+    <script>let myLabels = document.querySelectorAll('.lbl-toggle');
+
+        Array.from(myLabels).forEach(label => {
+          label.addEventListener('keydown', e => {
+            // 32 === spacebar
+            // 13 === enter
+            if (e.which === 32 || e.which === 13) {
+              e.preventDefault();
+              label.click();
+            };
+          });
+        });</script>
+ -->
+
+                    <!--  <script>
+        function initComparisons() {
+          var x, i;
+          /*find all elements with an "overlay" class:*/
+          x = document.getElementsByClassName("img-comp-overlay");
+          for (i = 0; i < x.length; i++) {
+            /*once for each "overlay" element:
+            pass the "overlay" element as a parameter when executing the compareImages function:*/
+            compareImages(x[i]);
+          }
+          function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            /*get the width and height of the img element*/
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            /*set the width of the img element to 50%:*/
+            img.style.width = (w / 2) + "px";
+            /*create slider:*/
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            /*insert slider*/
+            img.parentElement.insertBefore(slider, img);
+            /*position the slider in the middle:*/
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            /*execute a function when the mouse button is pressed:*/
+            slider.addEventListener("mousedown", slideReady);
+            /*and another function when the mouse button is released:*/
+            window.addEventListener("mouseup", slideFinish);
+            /*or touched (for touch screens:*/
+            slider.addEventListener("touchstart", slideReady);
+            /*and released (for touch screens:*/
+            window.addEventListener("touchstop", slideFinish);
+            function slideReady(e) {
+              /*prevent any other actions that may occur when moving over the image:*/
+              e.preventDefault();
+              /*the slider is now clicked and ready to move:*/
+              clicked = 1;
+              /*execute a function when the slider is moved:*/
+              window.addEventListener("mousemove", slideMove);
+              window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+              /*the slider is no longer clicked:*/
+              clicked = 0;
+            }
+            function slideMove(e) {
+              var pos;
+              /*if the slider is no longer clicked, exit this function:*/
+              if (clicked == 0) return false;
+              /*get the cursor's x position:*/
+              pos = getCursorPos(e)
+              /*prevent the slider from being positioned outside the image:*/
+              if (pos < 0) pos = 0;
+              if (pos > w) pos = w;
+              /*execute a function that will resize the overlay image according to the cursor:*/
+              slide(pos);
+            }
+            function getCursorPos(e) {
+              var a, x = 0;
+              e = e || window.event;
+              /*get the x positions of the image:*/
+              a = img.getBoundingClientRect();
+              /*calculate the cursor's x coordinate, relative to the image:*/
+              x = e.pageX - a.left;
+              /*consider any page scrolling:*/
+              x = x - window.pageXOffset;
+              return x;
+            }
+            function slide(x) {
+              /*resize the image:*/
+              img.style.width = x + "px";
+              /*position the slider:*/
+              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+          }
+        }
+        </script> 
+        </head>-->
+
+
+                    <br>
+                    <br>
 
 </html>

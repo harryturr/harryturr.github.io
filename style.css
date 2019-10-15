@@ -37,6 +37,17 @@ ol.a {
   list-style: none;
 } 
 
+ul.b,
+ol.b {
+  color: #808284;
+  display: inline-block;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  width: 90%;
+  font-size: 15px;
+  margin: 18px;
+}
+
 a {
   text-decoration: none;
   outline: none;
@@ -187,7 +198,7 @@ input {
   width: 100px;
 }
 
-img {
+img.a {
   max-width: 100%;
 }
 
