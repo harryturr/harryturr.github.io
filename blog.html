@@ -133,11 +133,12 @@
                             </p>
 
                             <p class="blog_text">
-                                First thing to do is look at the actual structure of the text files. We see that they are formatted as follows:
+                                First thing to do is look at the actual structure of the text files. We see that they
+                                are formatted as follows:
                             </p>
 
                             <pre>
-                                 
+
     <code class = "code_text">
 Number of subtitle. 
 Time stamp of subtitle .
@@ -151,12 +152,13 @@ Text.
     </code>
     </pre>
 
-    <p class="blog_text">
-        We can just use Bash to parse and format our data. With the unix pipeline, we could do this a a huge one liner, 
-        but for the sake of readability we will break it down line by line! 
-        </p>
+                            <p class="blog_text">
+                                We can just use Bash to parse and format our data. With the unix pipeline, we could do
+                                this a a huge one liner,
+                                but for the sake of readability we will break it down line by line!
+                            </p>
 
-                            
+
 
 
                             <pre>
@@ -177,59 +179,70 @@ Text.
     </code>
     </pre>
 
-    <ol class="b">
-            <li>Read all files in our subtitle directory.</li>
-            <li>Delete lines that start with a number.</li>
-            <li>Replace "?", "!", and "." with a single space.</li>
-            <li>Replace multiple spaces with a single space.</li>
-            <li>Delete everything but letters, apostrophes, and spaces.</li>
-            <li>Delete spaces from begining of lines.</li>
-            <li>Turn spaces into line breaks to separate words by lines.</li>
-            <li>Delete empyt lines.</li>
-            <li>Make all upper case letters to lower case.</li>
-            <li>Sort alphabetically.</li>
-            <li>Make a list with unique words and their occurence.</li>
-            <li>Sort by occurences.</li>
-            <li>remove spaces and write the list to a file all_data.csv.</li>
+                            <ol class="b">
+                                <li>Read all files in our subtitle directory.</li>
+                                <li>Delete lines that start with a number.</li>
+                                <li>Replace "?", "!", and "." with a single space.</li>
+                                <li>Replace multiple spaces with a single space.</li>
+                                <li>Delete everything but letters, apostrophes, and spaces.</li>
+                                <li>Delete spaces from begining of lines.</li>
+                                <li>Turn spaces into line breaks to separate words by lines.</li>
+                                <li>Delete empyt lines.</li>
+                                <li>Make all upper case letters to lower case.</li>
+                                <li>Sort alphabetically.</li>
+                                <li>Make a list with unique words and their occurence.</li>
+                                <li>Sort by occurences.</li>
+                                <li>remove spaces and write the list to a file all_data.csv.</li>
 
-        </ol>
+                            </ol>
 
-        <p class="blog_text">
-Now we have a list of all of our uniqe words and how many times they occurred in the series. With this information, we can analyze our data!            </p>
+                            <p class="blog_text">
+                                Now we have a list of all of our uniqe words and how many times they occurred in the
+                                series. With this information, we can analyze our data! </p>
 
-        <h3>VISUALIZING</h3>
+                            <h3>VISUALIZING</h3>
 
-        <p class="blog_text">
-            In order to understand how many words we need to learn to have a certain grasp of the language, we can plot the percentage of total words as a function of the 
-            most common words. That is, for the top 1000 most common words we can plot what percentage of total words (non unique) they are.
-        </p>
+                            <p class="blog_text">
+                                In order to understand how many words we need to learn to have a certain grasp of the
+                                language, we can plot the percentage of total words as a function of the
+                                most common words. That is, for the top 1000 most common words we can plot what
+                                percentage of total words (non unique) they are.
+                            </p>
 
 
 
                             <div id="language_plot" style="width: 100%; height: 100%;"></div>
 
-        <p class="blog_text">
-In doing so we see this nice logarithmic plot. What we see is that if you were to learn the top <b>1000</b> most common words, you would understand just over <b>85%</b> of the total
-words spoken in the entire series! Even by learning the top 50 most common words, you would approximately undersatnd 50% of every word spoken.
-            </p>
+                            <p class="blog_text">
+                                In doing so we see this nice logarithmic plot. What we see is that if you were to learn
+                                the top <b>1000</b> most common words, you would understand just over <b>85%</b> of the
+                                total
+                                words spoken in the entire series! Even by learning the top 50 most common words, you
+                                would approximately undersatnd 50% of every word spoken.
+                            </p>
 
-            <h3>OUTLOOK</h3>
-            <p class="blog_text">
-                So we see that with our quick and dirty approach, we would just have to learn the most common 1000 words to have an 85% grasp of language, according to 
-                Friends. This seems great, but there are some things we did not consider:
-            </p>
+                            <h3>OUTLOOK</h3>
+                            <p class="blog_text">
+                                So we see that with our quick and dirty approach, we would just have to learn the most
+                                common 1000 words to have an 85% grasp of language, according to
+                                Friends. This seems great, but there are some things we did not consider:
+                            </p>
 
-            <ul class="b">
-                    <li>We do not remove names.</li>
-                    <li>We do not make verb conjugations non unique, that is every tense is a unique word.</li>
-                    <li>We assume just memorizing these words will give us an understanding of the language.</li>
-                </ul>
+                            <ul class="b">
+                                <li>We do not remove names.</li>
+                                <li>We do not make verb conjugations non unique, that is every tense is a unique word.
+                                </li>
+                                <li>We assume just memorizing these words will give us an understanding of the language.
+                                </li>
+                            </ul>
 
-                <p class="blog_text">
-There are many areas in which I could refine this approach, but for the sake of the exercise it isn't worth it. Surely 
-the idea that I could become <b>fluent</b> in a languge just by memorizing individual has its flaws, but it would certainly 
-be a great way to make a vocab list to accompany my formal studies!
-                    </p>
+                            <p class="blog_text">
+                                There are many areas in which I could refine this approach, but for the sake of the
+                                exercise it isn't worth it. Surely
+                                the idea that I could become <b>fluent</b> in a languge just by memorizing individual
+                                has its flaws, but it would certainly
+                                be a great way to make a vocab list to accompany my formal studies!
+                            </p>
 
 
 
@@ -447,16 +460,68 @@ be a great way to make a vocab list to accompany my formal studies!
                                 reflect on
                                 some of the more famous Physics Review Letters articles whose work eventually led to a
                                 Nobel Prize.
-                                <ul class="blog_text">
-                                    <li>Quote from Gervais about PRL.</li>
-                                    <li>Why PRL is good.</li>
-                                    <li>Why discrepancy in data sources.</li>
+                                <br>
+                                <br>
+                                Althought the impact factor of PRL may not seem that impressive at first glance,
+                                it is an incredibly well respected journal for experimental condensed matter physicists.
+                                <br>
+                                <br>
+                                Over the years, some of the most important contributions to experimental condensed
+                                matter physics manuscripts, those that have gone on to win the nobel prize, have been
+                                published in PRL. Some of these papers include:
+                                <ul class="b">
+                                    <li>Graphene; Novoselov et al</li>
+                                    <li>Scanning Tunneling Microscopy; Binning et al</li>
+                                    <li>The Transistor; Bardeen and Brattain</li>
+                                    <li>Helium 3; Osheroff et al</li>
+                                    <li>Fractional quantum Hall effect; Tsui et al</li>
+                                    <li>Quantum Hall effect; Klisting</li>
+
                                 </ul>
                             </p>
+                            <p class="blog_text">
 
+                                In their respective fields, all of these papers have been impactful, so much so that all
+                                of them have won the <b>Nobel prize in physics</b>.
+                                <br>
+                                <br>
+                                But how impactful is impactful? Well, since impact is often judged by citation count, we
+                                can look at every citation for these papers since they have been published (as of spring
+                                2019). We can look at citations count from Google Scholar, Web of Science, and the
+                                American Physical society.
+                            </p>
                             <div id="myDiv2" style="width: 100%; height: 100%;">
                                 <!-- Plotly chart will be drawn inside this DIV -->
                             </div>
+
+                            <p class="blog_text">
+
+                                We see a couple of interesting things. First of all, their is a large discrepancy
+                                between Google Scholar compared to WOS and APS. This came as a bit surprising, since APS
+                                is the organization responsible for PRL.
+                                <br>
+                                <br>
+                                Secondly, for being the newest paper, the Graphene manuscript has by far the most
+                                citations, with almost eight times more counts than the second most cited.
+                                <br><br>
+                                This begs the question, does more citations really mean higher impact? Well, we have to
+                                consider that today there are many more journals and publications than ever before, so
+                                citing and self citing new papers seems more likely to happen. Since graphene has so
+                                many potential applications in electronics, it makes sense that their is a lot of
+                                publications on it.
+                                <br><br>
+                                So maybe graphene has the highest impact of all condensed matter physics papers? Or
+                                perhaps we are just at the "peak of Inflated Expectations" in its Gartner Hype Cycle.
+                            </p>
+                            <br>
+                            <img src="./blogs/img/hype.jpg" class="a" alt="hype">
+                            <br>
+                            <p class="blog_text">
+                                Graphene is surely at its peak hype these days. This warrants the immense number of
+                                graphene related publications. It is impossible to say if graphene will live up to its
+                                hype, but maybe in a few years we will have graphene consumer electronics as we enter
+                                the "Plateau of Productivity", while a new material is reaching its peak hype.
+                            </p>
 
 
                             <script>
@@ -615,7 +680,7 @@ be a great way to make a vocab list to accompany my formal studies!
                 <body>
 
 
-                    <h2>Restoring a 1978 VW Camper Bus | <span>2011 - 2018 </span></h2>
+                    <h2>Restoring a 1978 VW Camper Bus | <span>October 2019 </span></h2>
                     <br>
                     <div class="wrap-collabsible">
                         <input id="collapsible3" class="toggle" type="checkbox" unchecked>
@@ -716,57 +781,266 @@ be a great way to make a vocab list to accompany my formal studies!
 
 
                                 <p class="blog_text">
-     I can discuss my recent interest in mechanical keyboards. Talk about some of the first ones I had, including the custom modding
-     I did. Then I can discuss how I found the holy grail at University of Montreal.
-                                    <ul class="blog_text">
-                                        <li>The buckling spring mechanism</li>
-                                        <li>Force curve of keyboard press, and compare to force curve of afm</li>
-                                        <li>Does the force feedback tell us if it is good or not?</li>
-                                    </ul>
+                                    I have recently taken an interest in vintage keyboards. It started out with finding
+                                    a late 80s HP micro keyboard in my lab. It was in the throwout pile, covered in dirt
+                                    and dust. But when I picked it up and flet the <i>klick clack</i> of its keys, I
+                                    knew I had to rescue it!
+                                    <br><br>
+                                    It was a cool keyboard, I liked the look and feel of it. The only thing was that the
+                                    connection was a DIN-5, not a PS2. I had never even seen a DIN-5 connection before,
+                                    but after a quick google search I saw that I could passively convert the DIN-5 to
+                                    PS2.
+                                    <br><br>
+                                    After a quick dig through the garbage box to find a broken mouse with a PS2 end, I
+                                    did some quick solder work and had my first working mechanical keyboard.
+                                    <br><br>
+                                    It was awesome. Having only ever typed on modern digital keyboards, I know
+                                    understood what all the hype was about. I started rescuing any old keyboard I saw in
+                                    the recycling, garbage, etc.
+                                    <br><br>
+                                    One day while I was at University of Montreal taking a coffee break during some
+                                    experiments, I saw an old pile of lab equipment waiting for the <i>poubelle</i>.
+                                    After some poking around, I found what many consider the holy grail of mechanical
+                                    keyboards - an IBM Model M.
+                                    <br><br>
+                                    It was heavy, dirty, and had some shortcut stickers for lab equipment stuck onto
+                                    some keys, but I stuck the keyboard in my bag and brought it home for a good wash.
+                                    <br><br>
+                                    I had heard about how loud these keyboards were with their <b>buckle spring</b>
+                                    mechanism, but I never imagined how great the typing experience on this keyboard
+                                    would be. At the start of your key press, you feel the perfect amount of force as
+                                    you begin to depress the key. It gets a little harder to push the more you compress,
+                                    but eventually, you hit the point where spring buckles and with a lout <b>CLACK</b>
+                                    the key depresses.
+                                    <br><br>
+                                    As an AFM guy, I love force curves (who wouldn't). And much to my surprise, the
+                                    wikipedia page for the buckling spring had a force curve on it. You can see the
+                                    force increase leading to the key press, and the hysteresis of the key on the
+                                    release.
+
+                                    <!--   <div id="1cbd6577-545f-4bf8-a37b-25de451fe5f9" style="width: 100%; height: 100%;"
+                                    class="plotly-graph-div"></div> -->
+                                    <img src="blogs/img/buckle.png" alt="buckle_spring" </p> <p class="blog_text">
+                                    This looks strikingly similar to an AFM force curve of a microcantilever approaching
+                                    a surface (just flipped vertical axis).
+                                    <br>
+                                    <br>
+
+                                    <img src="blogs/img/afm_force.jpg" alt="force curve">
                                 </p>
-<body>
-                                <div id="1cbd6577-545f-4bf8-a37b-25de451fe5f9" style="width: 100%; height: 100%;" class="plotly-graph-div"></div>
-                                <script type="text/javascript">
-                                    (function(){
-                                        window.PLOTLYENV={'BASE_URL': 'https://plot.ly'};
-                        
-                                        var gd = document.getElementById('1cbd6577-545f-4bf8-a37b-25de451fe5f9')
-                                        var resizeDebounce = null;
-                        
-                                        function resizePlot() {
-                                            var bb = gd.getBoundingClientRect();
-                                            Plotly.relayout(gd, {
-                                                width: bb.width,
-                                                height: bb.height
-                                            });
-                                        }
-                        
-                                        
-                                        window.addEventListener('resize', function() {
-                                            if (resizeDebounce) {
-                                                window.clearTimeout(resizeDebounce);
+                                <p class="blog_text">
+                                    I deal with forces (on the order of piconewtons) daily, so I understand and
+                                    appreciate the importance of force feedback. One thing for sure is that the buckle
+                                    spring lives up to the hype, and truly is a joy to type on. See below a picture of
+                                    my vintage setup!
+                                    <br>
+                                    <br>
+
+                                    <img src="blogs/img/modelm.jpg" </p> <body>
+
+                                    <script type="text/javascript">
+                                        (function () {
+                                            window.PLOTLYENV = {
+                                                'BASE_URL': 'https://plot.ly'
+                                            };
+
+                                            var gd = document.getElementById('1cbd6577-545f-4bf8-a37b-25de451fe5f9')
+                                            var resizeDebounce = null;
+
+                                            function resizePlot() {
+                                                var bb = gd.getBoundingClientRect();
+                                                Plotly.relayout(gd, {
+                                                    width: bb.width,
+                                                    height: bb.height
+                                                });
                                             }
-                                            resizeDebounce = window.setTimeout(resizePlot, 100);
-                                        });
-                                        
-                        
-                                        
-                                        Plotly.plot(gd, {
-                                            data: [{"meta": {"columnNames": {"x": "x", "y": "y"}}, "mode": "lines", "type": "scatter", "xsrc": "griffin.harrisonn:2:341a3d", "x": [0.00033469963360307706, 0.005032949363418294, 0.009351029338113184, 0.013288148772965701, 0.017606228747660598, 0.023194308985950384, 0.02903682420855629, 0.03373626011545457, 0.03856261697024013, 0.04338936921738672, 0.048978437936579064, 0.054948862587974795, 0.05964889158341462, 0.06409547407544086, 0.06930437303951288, 0.07349711363576455, 0.07832524975617472, 0.08315397896512638, 0.08633075888973823, 0.09027025067875688, 0.09230395128766113, 0.09332267970582808, 0.09345256609642304, 0.09345909007037985, 0.09346502095579515, 0.0935972797005562, 0.09360202440888843, 0.0936036059783325, 0.09627250441521469, 0.10160990589661807, 0.1064390304979308, 0.11075968052297228, 0.11495301420776549, 0.1195277038247621, 0.1239750771015104, 0.12816762000158158, 0.1331224793736985, 0.1379494293170256, 0.1420138650921264, 0.14595058913461792, 0.14899807575717638, 0.15305994148193058, 0.15674025357830085, 0.15914997232253475, 0.16181254448164062, 0.16269980493976857, 0.16270158420539318, 0.1625772333078525, 0.16245347549885336, 0.16194895484619237, 0.16093655270580173, 0.1595427946332077, 0.15776708753986873, 0.1556102222105069, 0.15307180325276115, 0.14964355378654084, 0.14456375042834174, 0.1403721960091731, 0.13592620660568838, 0.13262329651791127, 0.12741419985765876, 0.1228401033292037, 0.11763021588422914, 0.1119122492553444, 0.1068292827582571, 0.10200035585312492, 0.09729874528824102, 0.0934861744471097, 0.08916572211824868, 0.08420947887286818, 0.08039690803173682, 0.07467815061813005, 0.07010326330495294, 0.06514702005957246, 0.05790303661333264, 0.05065806468619026, 0.045573714315839425, 0.04074201966418009, 0.03692687877270211, 0.03450944987742838, 0.03298264227535125, 0.03095012784353007, 0.026884703587526693, 0.023708912143817384, 0.020152160160265702, 0.017103685056804704, 0.012657893349500484, 0.008466536626512377, 0.003894021667501385, 0.0004649814165590266], "ysrc": "griffin.harrisonn:2:c55fac", "y": [29.36236391912908, 32.59720062208399, 35.085536547433904, 37.32503888024883, 39.81337480559876, 43.048211508553656, 46.15863141524106, 48.64696734059098, 51.2597200622084, 53.62363919129083, 56.236391912908246, 58.849144634525665, 60.9642301710731, 62.58164852255055, 64.44790046656298, 65.81648522550545, 67.3094867807154, 68.42923794712286, 69.17573872472784, 69.92223950233281, 70.04665629860031, 68.92690513219284, 67.1850699844479, 63.07931570762054, 59.34681181959565, 56.11197511664075, 53.12597200622084, 52.13063763608087, 52.50388802488336, 53.49922239502333, 54.370139968895806, 55.241057542768274, 56.236391912908246, 57.23172628304822, 58.35147744945568, 59.84447900466563, 61.58631415241058, 63.82581648522551, 65.94090202177294, 68.42923794712286, 70.5443234836703, 74.27682737169518, 78.13374805598757, 81.61741835147745, 85.97200622083982, 87.58942457231727, 86.4696734059098, 84.72783825816485, 82.61275272161743, 80.1244167962675, 77.26283048211509, 74.40124416796269, 71.91290824261276, 69.30015552099533, 66.81181959564542, 64.32348367029549, 61.21306376360809, 59.09797822706066, 57.10730948678072, 55.73872472783826, 53.99688958009332, 52.628304821150856, 51.3841368584759, 49.89113530326595, 48.77138413685848, 47.77604976671851, 46.65629860031105, 46.034214618973564, 45.03888024883359, 44.167962674961124, 43.54587869362364, 42.55054432348367, 41.679626749611195, 40.80870917573873, 39.68895800933126, 39.19129082426128, 38.94245723172629, 39.68895800933126, 40.68429237947123, 42.05287713841369, 42.92379471228617, 42.05287713841369, 40.559875583203734, 39.19129082426128, 37.573872472783826, 36.080870917573876, 33.965785381026436, 31.726283048211513, 29.36236391912908, 27.371695178849137]}],
-                                            layout: {"title": {"text": "key stroke force of IBM model m"}, "xaxis": {"type": "linear", "range": [0.00033469963360307706, 0.16270158420539318], "title": {"text": "key travel (in.)"}, "autorange": true}, "yaxis": {"type": "linear", "range": [24.026265768100906, 90.9348539830655], "title": {"text": "key force (gf)"}, "autorange": true}, "autosize": true},
-                                            frames: [],
-                                            config: {"showLink": false, "linkText": "Export to plot.ly", "mapboxAccessToken": "pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2lxMnVvdm5iMDA4dnhsbTQ5aHJzcGs0MyJ9.X9o_rzNLNesDxdra4neC_A"}
-                                        });
-                                        
-                                   }());
-                                </script>
-                            </body>
+
+
+                                            window.addEventListener('resize', function () {
+                                                if (resizeDebounce) {
+                                                    window.clearTimeout(resizeDebounce);
+                                                }
+                                                resizeDebounce = window.setTimeout(resizePlot, 100);
+                                            });
 
 
 
-                            </div>
-                        </div>
-                    </div>
+                                            Plotly.plot(gd, {
+                                                data: [{
+                                                    "meta": {
+                                                        "columnNames": {
+                                                            "x": "x",
+                                                            "y": "y"
+                                                        }
+                                                    },
+                                                    "mode": "lines",
+                                                    "type": "scatter",
+                                                    "xsrc": "griffin.harrisonn:2:341a3d",
+                                                    "x": [0.00033469963360307706,
+                                                        0.005032949363418294,
+                                                        0.009351029338113184,
+                                                        0.013288148772965701,
+                                                        0.017606228747660598,
+                                                        0.023194308985950384,
+                                                        0.02903682420855629,
+                                                        0.03373626011545457,
+                                                        0.03856261697024013,
+                                                        0.04338936921738672,
+                                                        0.048978437936579064,
+                                                        0.054948862587974795,
+                                                        0.05964889158341462,
+                                                        0.06409547407544086,
+                                                        0.06930437303951288,
+                                                        0.07349711363576455,
+                                                        0.07832524975617472,
+                                                        0.08315397896512638,
+                                                        0.08633075888973823,
+                                                        0.09027025067875688,
+                                                        0.09230395128766113,
+                                                        0.09332267970582808,
+                                                        0.09345256609642304,
+                                                        0.09345909007037985,
+                                                        0.09346502095579515, 0.0935972797005562,
+                                                        0.09360202440888843, 0.0936036059783325,
+                                                        0.09627250441521469,
+                                                        0.10160990589661807, 0.1064390304979308,
+                                                        0.11075968052297228,
+                                                        0.11495301420776549, 0.1195277038247621,
+                                                        0.1239750771015104, 0.12816762000158158,
+                                                        0.1331224793736985, 0.1379494293170256,
+                                                        0.1420138650921264, 0.14595058913461792,
+                                                        0.14899807575717638,
+                                                        0.15305994148193058,
+                                                        0.15674025357830085,
+                                                        0.15914997232253475,
+                                                        0.16181254448164062,
+                                                        0.16269980493976857,
+                                                        0.16270158420539318, 0.1625772333078525,
+                                                        0.16245347549885336,
+                                                        0.16194895484619237,
+                                                        0.16093655270580173, 0.1595427946332077,
+                                                        0.15776708753986873, 0.1556102222105069,
+                                                        0.15307180325276115,
+                                                        0.14964355378654084,
+                                                        0.14456375042834174, 0.1403721960091731,
+                                                        0.13592620660568838,
+                                                        0.13262329651791127,
+                                                        0.12741419985765876, 0.1228401033292037,
+                                                        0.11763021588422914, 0.1119122492553444,
+                                                        0.1068292827582571, 0.10200035585312492,
+                                                        0.09729874528824102, 0.0934861744471097,
+                                                        0.08916572211824868,
+                                                        0.08420947887286818,
+                                                        0.08039690803173682,
+                                                        0.07467815061813005,
+                                                        0.07010326330495294,
+                                                        0.06514702005957246,
+                                                        0.05790303661333264,
+                                                        0.05065806468619026,
+                                                        0.045573714315839425,
+                                                        0.04074201966418009,
+                                                        0.03692687877270211,
+                                                        0.03450944987742838,
+                                                        0.03298264227535125,
+                                                        0.03095012784353007,
+                                                        0.026884703587526693,
+                                                        0.023708912143817384,
+                                                        0.020152160160265702,
+                                                        0.017103685056804704,
+                                                        0.012657893349500484,
+                                                        0.008466536626512377,
+                                                        0.003894021667501385,
+                                                        0.0004649814165590266
+                                                    ],
+                                                    "ysrc": "griffin.harrisonn:2:c55fac",
+                                                    "y": [29.36236391912908, 32.59720062208399,
+                                                        35.085536547433904, 37.32503888024883,
+                                                        39.81337480559876, 43.048211508553656,
+                                                        46.15863141524106, 48.64696734059098,
+                                                        51.2597200622084, 53.62363919129083,
+                                                        56.236391912908246, 58.849144634525665,
+                                                        60.9642301710731, 62.58164852255055,
+                                                        64.44790046656298, 65.81648522550545,
+                                                        67.3094867807154, 68.42923794712286,
+                                                        69.17573872472784, 69.92223950233281,
+                                                        70.04665629860031, 68.92690513219284,
+                                                        67.1850699844479, 63.07931570762054,
+                                                        59.34681181959565, 56.11197511664075,
+                                                        53.12597200622084, 52.13063763608087,
+                                                        52.50388802488336, 53.49922239502333,
+                                                        54.370139968895806, 55.241057542768274,
+                                                        56.236391912908246, 57.23172628304822,
+                                                        58.35147744945568, 59.84447900466563,
+                                                        61.58631415241058, 63.82581648522551,
+                                                        65.94090202177294, 68.42923794712286,
+                                                        70.5443234836703, 74.27682737169518,
+                                                        78.13374805598757, 81.61741835147745,
+                                                        85.97200622083982, 87.58942457231727,
+                                                        86.4696734059098, 84.72783825816485,
+                                                        82.61275272161743, 80.1244167962675,
+                                                        77.26283048211509, 74.40124416796269,
+                                                        71.91290824261276, 69.30015552099533,
+                                                        66.81181959564542, 64.32348367029549,
+                                                        61.21306376360809, 59.09797822706066,
+                                                        57.10730948678072, 55.73872472783826,
+                                                        53.99688958009332, 52.628304821150856,
+                                                        51.3841368584759, 49.89113530326595,
+                                                        48.77138413685848, 47.77604976671851,
+                                                        46.65629860031105, 46.034214618973564,
+                                                        45.03888024883359, 44.167962674961124,
+                                                        43.54587869362364, 42.55054432348367,
+                                                        41.679626749611195, 40.80870917573873,
+                                                        39.68895800933126, 39.19129082426128,
+                                                        38.94245723172629, 39.68895800933126,
+                                                        40.68429237947123, 42.05287713841369,
+                                                        42.92379471228617, 42.05287713841369,
+                                                        40.559875583203734, 39.19129082426128,
+                                                        37.573872472783826, 36.080870917573876,
+                                                        33.965785381026436, 31.726283048211513,
+                                                        29.36236391912908, 27.371695178849137
+                                                    ]
+                                                }],
+                                                layout: {
+                                                    "title": {
+                                                        "text": "key stroke force of IBM model m"
+                                                    },
+                                                    "xaxis": {
+                                                        "type": "linear",
+                                                        "range": [0.00033469963360307706,
+                                                            0.16270158420539318
+                                                        ],
+                                                        "title": {
+                                                            "text": "key travel (in.)"
+                                                        },
+                                                        "autorange": true
+                                                    },
+                                                    "yaxis": {
+                                                        "type": "linear",
+                                                        "range": [24.026265768100906, 90.9348539830655],
+                                                        "title": {
+                                                            "text": "key force (gf)"
+                                                        },
+                                                        "autorange": true
+                                                    },
+                                                    "autosize": true
+                                                },
+                                                frames: [],
+                                                config: {
+                                                    "showLink": false,
+                                                    "linkText": "Export to plot.ly",
+                                                    "mapboxAccessToken": "pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2lxMnVvdm5iMDA4dnhsbTQ5aHJzcGs0MyJ9.X9o_rzNLNesDxdra4neC_A"
+                                                }
+                                            });
+
+                                        }());
+                                    </script>
+                </body>
+
+
+
+    </div>
+    </div>
+    </div>
 
 
 
@@ -774,14 +1048,14 @@ be a great way to make a vocab list to accompany my formal studies!
 
 
 
-                    <!-- ################################################################################ -->
+    <!-- ################################################################################ -->
 
 
 
 
 
 
-                    <!--   
+    <!--   
     <script>let myLabels = document.querySelectorAll('.lbl-toggle');
 
         Array.from(myLabels).forEach(label => {
@@ -796,7 +1070,7 @@ be a great way to make a vocab list to accompany my formal studies!
         });</script>
  -->
 
-                    <!--  <script>
+    <!--  <script>
         function initComparisons() {
           var x, i;
           /*find all elements with an "overlay" class:*/
@@ -877,7 +1151,7 @@ be a great way to make a vocab list to accompany my formal studies!
         </head>-->
 
 
-                    <br>
-                    <br>
+    <br>
+    <br>
 
 </html>
