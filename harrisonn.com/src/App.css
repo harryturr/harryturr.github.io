@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+  background-color: #e4ebf5;
+  min-height: 100vh;
+}
+
+.Content {
+  display: "flex";
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px;
+}
+
+p::first-line {
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.Prof-pic {
+  border-radius: 50%;
+  width: 50%;
+  float: right;
+  max-width: 275px;
+}
+
+.Github {
+  border-radius: 5%;
+  width: 6vmin;
+  display: inline;
+  vertical-align: middle;
+}
+
+.VW {
+  border-radius: 5%;
+  max-width: 100vmin;
+  padding: 10px;
+}
+
+.VW-Outer {
+  max-width: 100vmin;
+}
+
+mark {
+  color: #e4ebf5;
+  background-color: #343638;
+  font-weight: thick;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+.App-header {
+  background-color: #e4ebf5;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #343638;
+}
+
+.App-header-og {
+  background-color: #e4ebf5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
