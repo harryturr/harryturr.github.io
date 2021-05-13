@@ -44,8 +44,8 @@ function App() {
           })}
         </div>
       </header>
-      <div className="Content">
-        <Card>
+      <div className="Content" >
+        <Card style={{ padding: "25px" }}>
           <ContentDiv clicked={clicked} />
         </Card>
       </div>

@@ -11,7 +11,7 @@ export let StyledCard = (props) => {
         padding: "5px",
       }}
     >
-      <a href={props.href}>{props.text}</a>
+      <a target="_blank" href={props.href}>{props.text}</a>
     </Card>
   );
 };

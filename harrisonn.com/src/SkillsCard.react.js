@@ -4,7 +4,7 @@ export let SkillsCard = () => {
   return (
     <>
       <h2 className="h2-cv">Skills / Other</h2>
-      <Card inset>
+      <Card flat>
         <div style={{ padding: "15px" }}>
           <h3>Programming</h3>
 
@@ -25,7 +25,7 @@ export let SkillsCard = () => {
             </ul>
           </section>
 
-          <h3>Language:</h3>
+          <h3>Language</h3>
 
           <section>
             <b>English:</b> native <br />
@@ -41,7 +41,7 @@ export let SkillsCard = () => {
             </ul>
             <b>Hobbies:</b>
             <ul>
-              <li>Camping | Canoeing | Vintage VWs | Bike Maintenance</li>
+              <li>Camping | Canoeing | Vintage VWs | Bike Maintenance | Birding</li>
             </ul>
           </section>
         </div>

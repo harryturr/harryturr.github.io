@@ -18,26 +18,24 @@ let StyledCard = (props) => {
 
 export let Contact = () => {
   return (
-    <Card style={{ textAlign: "left", padding: "10px" }}>
+    <Card flat style={{ textAlign: "left", padding: "10px" }}>
       <div style={{ width: "100%" }}>
         <p>
-          I'm currently searching for job opportunities! <br />
-          <br />
-          I'm looking for a team where I can challenge myself, learn new tech,
+          Enjoy working in teams where I can challenge myself, learn new tech,
           and continue to grow as a developer.
           <br />
           <br />
           I'm not afraid to get my hands dirty and try new things.
           <br />
           <br />
-          If you think I'd be a good fit, please reach out! <br /> <br />
+          Happy to speak about new and exciting opportunities! <br /> <br />
           <StyledCard
             href="mailto:griffin.harrisonn@gmail.com"
             text="griffin.harrisonn (@) gmail.com"
           />{" "}
           <br />
           <StyledCard
-            href="https://www.linkedin.com/in/harrisonngriffin/"
+            target="_blank" href="https://www.linkedin.com/in/harrisonngriffin/"
             text="/in/harrisonngriffin"
           />{" "}
           <br />

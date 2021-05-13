@@ -18,12 +18,14 @@ let ContentDiv = (props) => {
 
 export let Resume = () => {
   const [clicked, setClicked] = useState("professional");
+  const [hover, setHover] = useState(false);
+
 
   return (
-    <Card style={{ textAlign: "left", padding: "10px" }}>
+    <Card flat style={{ textAlign: "left", padding: "10px" }}>
       <div style={{ width: "100%" }}>
-        <p>I'm currently searching for job opportunities — check out my CV below!</p> <br />
-{/*         <p style={{ fontSize: "1rem" }}>
+        {/*<p>I'm currently searching for job opportunities — check out my CV below!</p> <br />
+         <p style={{ fontSize: "1rem" }}>
           Experience in FE development with <StyledChip text="Javascript" /> and{" "}
           <StyledChip text="React" />. Knowledge in
           <StyledChip text="Python" /> for writing integration tests and some BE
@@ -33,14 +35,17 @@ export let Resume = () => {
           <StyledChip text="Node" /> .
         </p> */}
 
-        <div style={{ marginTop: "25px", alignItems: "center",
+        <div style={{/*  marginTop: "25px", */ alignItems: "center",
   justifyContent: "center" }}>
           {["professional", "education/research", "skills/other"].map((i) => {
             return (
               <Button
+                text
+                size='small'
                 key={i}
-                text={clicked === i ? true : false}
+                active={clicked === i ? true : false}
                 onClick={() => setClicked(i)}
+                bgColor={clicked === i ? '#f7f9fc' : ''}
               >
                 {i}
               </Button>

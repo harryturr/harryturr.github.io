@@ -4,19 +4,19 @@ export let EducationCard = () => {
   return (
     <>
       <h2 className="h2-cv">Education / Research </h2>
-      <Card inset>
+      <Card flat>
         <div style={{ padding: "15px" }}>
           <h3>
-            02/2018–<i>present</i> |{" "}
+            02/2018–02/2020 |{" "}
             <span>
-              <a href="https://www.mcgill.ca/">McGill University</a> | Montreal,
+              <a target="_blank" href="https://www.mcgill.ca/">McGill University</a> | Montreal,
               Qc, Canada
             </span>
           </h3>
 
           <section>
             <b>Masters student</b> in the{" "}
-            <a href="https://spm.physics.mcgill.ca/">Grütter SPM group</a> in
+            <a target="_blank" href="https://spm.physics.mcgill.ca/">Grütter SPM group</a> in
             the Department of Physics. <br />
             <b>GPA:</b> 4.0/4.0 <br />
             <ul>
@@ -40,15 +40,15 @@ export let EducationCard = () => {
 
               <li>
                 Present results at{" "}
-                <a href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
-                <a href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
+                <a target="_blank" href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
+                <a target="_blank" href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
               </li>
             </ul>
             <b>Publications:</b>{" "}
             <ul>
               <li>
                 <i>
-                  <a href="https://epjtechniquesandinstrumentation.springeropen.com/articles/10.1140/epjti/s40485-020-0053-9">
+                  <a target="_blank" href="https://epjtechniquesandinstrumentation.springeropen.com/articles/10.1140/epjti/s40485-020-0053-9">
                     Optical excitation of atomic force microscopy cantilever for
                     accurate spectroscopic measurements
                   </a>
@@ -69,7 +69,7 @@ export let EducationCard = () => {
           <h3>
             08/2016–12/2016 |{" "}
             <span>
-              <a href="https://www.concordia.ca/">Concordia University</a> |
+              <a target="_blank" href="https://www.concordia.ca/">Concordia University</a> |
               Montreal, Qc, Canada
             </span>
           </h3>
@@ -95,7 +95,7 @@ export let EducationCard = () => {
           <h3>
             09/2012-06/2016 |{" "}
             <span>
-              <a href="https://www.union.edu/">Union College</a> | Schenectady,
+              <a target="_blank" href="https://www.union.edu/">Union College</a> | Schenectady,
               NY, USA
             </span>
           </h3>
@@ -118,8 +118,8 @@ export let EducationCard = () => {
               </li>
               <li>
                 Present results at{" "}
-                <a href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
-                <a href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
+                <a target="_blank" href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
+                <a target="_blank" href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
               </li>
             </ul>
             <b>Teaching/Other:</b>{" "}
