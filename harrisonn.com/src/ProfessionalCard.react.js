@@ -23,7 +23,7 @@ export let ProfessionalCard = () => {
                 <li>React, python3, Docker, GraphQL, Postgres, UI/UX</li>
               </li>
               <li>
-                Release Manager for Dash open source repos.
+                Release Manager and Individual Contributor for Dash open source repos.
                 <li>
                   <a target="_blank" href="https://github.com/plotly/dash">Dash</a> |{" "}
                   <a target="_blank" href="https://github.com/plotly/dash-renderer">
@@ -46,12 +46,12 @@ export let ProfessionalCard = () => {
                 <a target="_blank" href="https://dash.plotly.com/integrating-dash">
                   Dash Embedded
                 </a>{" "}
-                enterprise features.
+                enterprise feature.
                 <li>
                   Interact with customers to develop specific requested features
                 </li>
                 <li>Troubleshoot issues with customer success team</li>
-                <li>Review pull requests</li>
+                <li>Review pull requests in feature repo.</li>
               </li>
             </ul>
           </section>
