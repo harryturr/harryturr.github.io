@@ -6,7 +6,7 @@ export let StyledChip = (props) => {
       active
       elevation={1}
       style={{
-        fontSize: "1.25rem",
+        fontSize: "1rem",
         width: "fit-content",
         padding: "10px",
         backgroundColor: "#f7f9fc",

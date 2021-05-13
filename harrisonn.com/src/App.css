@@ -18,10 +18,54 @@
 p::first-line {
   letter-spacing: 3px;
   word-spacing: 3px;
-}
+} 
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+}
+
+li {
+  margin-left: 25px;
+}
+
+
+section {
+  color: #343638;
+  font-size: .9em;
+  line-height: 1.4em;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 7%;
+  margin-top: 1em;
+}
+
+h3 span {
+  color: #58585B;
+  display: inline-block;
+  font-size: .8em;
+  letter-spacing: 2px;
+  margin-bottom: -1%;
+  margin-top: 1.1em;
+  padding-left: .4em;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #DF723E;
+  font-size: 1.125em;
+  letter-spacing: 1px;
+  margin-bottom: -1%;
+  text-decoration: none;
+}
+
+.h2-cv {
+  color: #DF723E;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 1em;
+  margin-bottom: .1em;
+  text-transform: uppercase;
+  font-weight: light;
 }
 
 .Prof-pic {
