@@ -9,15 +9,19 @@ export let EducationCard = () => {
           <h3>
             02/2018–02/2020 |{" "}
             <span>
-              <a target="_blank" href="https://www.mcgill.ca/">McGill University</a> | Montreal,
-              Qc, Canada
+              <a target="_blank" href="https://www.mcgill.ca/">
+                McGill University
+              </a>{" "}
+              | Montreal, Qc, Canada
             </span>
           </h3>
 
           <section>
             <b>Masters student</b> in the{" "}
-            <a target="_blank" href="https://spm.physics.mcgill.ca/">Grütter SPM group</a> in
-            the Department of Physics. <br />
+            <a target="_blank" href="https://spm.physics.mcgill.ca/">
+              Grütter SPM group
+            </a>{" "}
+            in the Department of Physics. <br />
             <b>GPA:</b> 4.0/4.0 <br />
             <ul>
               <li>
@@ -40,21 +44,30 @@ export let EducationCard = () => {
 
               <li>
                 Present results at{" "}
-                <a target="_blank" href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
-                <a target="_blank" href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
+                <a target="_blank" href="https://ncafm2018.aalto.fi/">
+                  NC-AFM 2018
+                </a>{" "}
+                and{" "}
+                <a target="_blank" href="http://www.physik.ur.de/ncafm22/">
+                  NC-AFM 2019
+                </a>
+                .
               </li>
             </ul>
             <b>Publications:</b>{" "}
             <ul>
               <li>
                 <i>
-                  <a target="_blank" href="https://epjtechniquesandinstrumentation.springeropen.com/articles/10.1140/epjti/s40485-020-0053-9">
-                    Optical excitation of atomic force microscopy cantilever for
-                    accurate spectroscopic measurements
+                  <a
+                    target="_blank"
+                    href="https://epjtechniquesandinstrumentation.springeropen.com/articles/10.1140/epjti/s40485-020-0053-9"
+                  >
+                    Miyahara, Y., Griffin, H., Roy-Gobeil, A. et al. Optical
+                    excitation of atomic force microscopy cantilever for
+                    accurate spectroscopic measurements. EPJ Techn Instrum 7, 2
+                    (2020).
                   </a>
                 </i>{" "}
-                . Yoichi Miyahara & Harrisonn Griffin, Antoine Roy-Gobeil, Peter
-                Grütter.
               </li>
             </ul>
             <b>Teaching/Other:</b>{" "}
@@ -69,8 +82,10 @@ export let EducationCard = () => {
           <h3>
             08/2016–12/2016 |{" "}
             <span>
-              <a target="_blank" href="https://www.concordia.ca/">Concordia University</a> |
-              Montreal, Qc, Canada
+              <a target="_blank" href="https://www.concordia.ca/">
+                Concordia University
+              </a>{" "}
+              | Montreal, Qc, Canada
             </span>
           </h3>
 
@@ -95,8 +110,10 @@ export let EducationCard = () => {
           <h3>
             09/2012-06/2016 |{" "}
             <span>
-              <a target="_blank" href="https://www.union.edu/">Union College</a> | Schenectady,
-              NY, USA
+              <a target="_blank" href="https://www.union.edu/">
+                Union College
+              </a>{" "}
+              | Schenectady, NY, USA
             </span>
           </h3>
 
@@ -118,8 +135,13 @@ export let EducationCard = () => {
               </li>
               <li>
                 Present results at{" "}
-                <a target="_blank" href="https://ncafm2018.aalto.fi/">NC-AFM 2018</a> and{" "}
-                <a target="_blank" href="http://www.physik.ur.de/ncafm22/">NC-AFM 2019</a>.
+                <a
+                  target="_blank"
+                  href="https://meetings.aps.org/Meeting/MAR16/Content/3097"
+                >
+                  APS March Meeting 2016
+                </a>
+                .
               </li>
             </ul>
             <b>Teaching/Other:</b>{" "}

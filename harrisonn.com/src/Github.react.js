@@ -13,7 +13,7 @@ export let Github = () => {
             Check out my <a target="_blank" href="https://github.com/harryturr">GitHub</a> to see
             more about me! <br /> <br />
             My open source contributions have been in{" "}
-            <a target="_blank" href="https://github.com/plotly/Dash">Plotly Dash</a> and it's
+            <a target="_blank" href="https://github.com/plotly/Dash">Plotly Dash</a> and its
             other core repos.
           </p>
         </div>

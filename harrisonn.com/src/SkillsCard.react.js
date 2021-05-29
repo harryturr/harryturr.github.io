@@ -11,17 +11,17 @@ export let SkillsCard = () => {
           <section>
             <b>Front End:</b>
             <ul>
-              <li>React | Javascript | HTML | CSS | Selenium</li>
+              <li>React, Javascript, HTML, CSS, Selenium</li>
             </ul>
 
             <b>Back End:</b>
             <ul>
-              <li>Python | GraphQL | Docker </li>
+              <li>Python, GraphQL, Docker </li>
             </ul>
 
             <b>Misc</b>
             <ul>
-              <li>GNU/Linux | git workflow | CI workflow </li>
+              <li>GNU/Linux, git workflow, CI workflow </li>
             </ul>
           </section>
 
@@ -37,11 +37,11 @@ export let SkillsCard = () => {
           <section>
             <b>Sports:</b>
             <ul>
-              <li>Cycling | Nordic Skiing | Hiking </li>
+              <li>Cycling, Nordic Skiing, Hiking </li>
             </ul>
             <b>Hobbies:</b>
             <ul>
-              <li>Camping | Canoeing | Vintage VWs | Bike Maintenance | Birding</li>
+              <li>Camping, Canoeing, Vintage VWs, Bike Maintenance, Birding</li>
             </ul>
           </section>
         </div>
