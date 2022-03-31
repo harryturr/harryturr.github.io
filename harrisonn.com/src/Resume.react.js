@@ -1,5 +1,5 @@
 import { Card, Button, Divider, Chip } from "ui-neumorphism";
-import { StyledChip } from "./StyledChip.react";
+// import { StyledChip } from "./StyledChip.react";
 import React, { useState } from "react";
 import { ProfessionalCard } from "./ProfessionalCard.react";
 import { EducationCard } from "./EducationCard.react";
@@ -18,7 +18,7 @@ let ContentDiv = (props) => {
 
 export let Resume = () => {
   const [clicked, setClicked] = useState("professional");
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
 
   return (
     <Card flat style={{ textAlign: "left", padding: "10px" }}>
