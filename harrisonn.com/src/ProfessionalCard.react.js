@@ -8,7 +8,7 @@ export let ProfessionalCard = () => {
       <Card flat>
         <div style={{ padding: "15px" }}>
           <h3>
-            11/2022–Present |{" "}
+            11/2021–Present |{" "}
             <span>
               <a target="_blank" href="https://www.sonder.com/">
                 Sonder
