@@ -8,9 +8,36 @@ export let ProfessionalCard = () => {
       <Card flat>
         <div style={{ padding: "15px" }}>
           <h3>
+            11/2022–Present |{" "}
+            <span>
+              <a target="_blank" href="https://www.sonder.com/">
+                Sonder
+              </a>{" "}
+              | Montreal, Qc, Canada
+            </span>
+          </h3>
+
+          <section>
+            <b>Fullstack Software Developer</b>
+            <ul>
+              <li>
+                Supporting and building features in key microservices.
+                <li>
+                  ES6, Typescript, React, GraphQL, python3, k8s, Docker, ruby
+                </li>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div style={{ padding: "15px" }}>
+          <h3>
             03/2020–05/2021 |{" "}
             <span>
-              <a target="_blank" href="https://plotly.com/">Plotly</a> | Montreal, Qc, Canada
+              <a target="_blank" href="https://plotly.com/">
+                Plotly
+              </a>{" "}
+              | Montreal, Qc, Canada
             </span>
           </h3>
 
@@ -23,27 +50,48 @@ export let ProfessionalCard = () => {
                 <li>React, python3, Docker, GraphQL, Postgres, UI/UX</li>
               </li>
               <li>
-                Release Manager and Individual Contributor for Dash open source repos.
+                Release Manager and Individual Contributor for Dash open source
+                repos.
                 <li>
-                  <a target="_blank" href="https://github.com/plotly/dash">Dash</a> |{" "}
-                  <a target="_blank" href="https://github.com/plotly/dash-renderer">
+                  <a target="_blank" href="https://github.com/plotly/dash">
+                    Dash
+                  </a>{" "}
+                  |{" "}
+                  <a
+                    target="_blank"
+                    href="https://github.com/plotly/dash-renderer"
+                  >
                     Dash-Renderer
                   </a>{" "}
                   |{" "}
-                  <a target="_blank" href="https://github.com/plotly/dash-core-components">
+                  <a
+                    target="_blank"
+                    href="https://github.com/plotly/dash-core-components"
+                  >
                     Dash-Core-Components
                   </a>{" "}
                   |{" "}
-                  <a target="_blank" href="https://github.com/plotly/dash-html-components">
+                  <a
+                    target="_blank"
+                    href="https://github.com/plotly/dash-html-components"
+                  >
                     Dash-HTML-Components
                   </a>{" "}
                   |{" "}
-                  <a target="_blank" href="https://github.com/plotly/dash-table">Dash-Table</a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/plotly/dash-table"
+                  >
+                    Dash-Table
+                  </a>
                 </li>
               </li>
               <li>
                 Champion of{" "}
-                <a target="_blank" href="https://dash.plotly.com/integrating-dash">
+                <a
+                  target="_blank"
+                  href="https://dash.plotly.com/integrating-dash"
+                >
                   Dash Embedded
                 </a>{" "}
                 enterprise feature.
@@ -61,8 +109,10 @@ export let ProfessionalCard = () => {
           <h3>
             04/2017–02/2018 |{" "}
             <span>
-              <a target="_blank" href="https://globalfoundries.com/">GLOBALFOUNDRIES</a> |
-              Albany, NY, USA
+              <a target="_blank" href="https://globalfoundries.com/">
+                GLOBALFOUNDRIES
+              </a>{" "}
+              | Albany, NY, USA
             </span>
           </h3>
 
