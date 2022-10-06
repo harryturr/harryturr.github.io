@@ -20,11 +20,58 @@ export let ProfessionalCard = () => {
           <section>
             <b>Fullstack Software Developer</b>
             <ul>
+              {/* <li> */}
+              Fullstack developer at Sonder (a tech-forward hospitality company)
+              in the Marketplace Core team. We are primarily responsible for
+              managing and optimizing resource allocation to maximize
+              availability which is key to business operations. Supporting and
+              bulding features in key microservices.
+              <br />
+              <br />
               <li>
-                Supporting and building features in key microservices.
+                Optimizations of room allocation and availability.
                 <li>
-                  ES6, Typescript, React, GraphQL, python3, k8s, Docker, ruby
+                  Optimize shuffling bookings that increase inventory
+                  availability across an entire calendar. Improve speed by 4:1,
+                  increase confidence levels in service.
                 </li>
+                <li>
+                  Optimize one-off booking allocation. Increase speed by 20:1
+                  while also being more accurate and better tested.
+                </li>
+              </li>
+              <li>
+                Individual Contributor to corporate bookings tool.
+                <li>
+                  Implement majority of the frontend service (React/Typescript)
+                  and user flows with extensive unit and integration testing.
+                </li>
+                <li> Work on legacy Ruby on Rails backend.</li>
+                <li> Communicate with stakeholders and designers.</li>
+              </li>
+              <li>
+                Other notable work.
+                <li>
+                  {" "}
+                  Implement new and improve existing apis for inter and intra
+                  team use.
+                </li>
+                <li>
+                  {" "}
+                  Build auditing tools to ensure health and validity of our
+                  data.
+                </li>
+                <li>
+                  {" "}
+                  Actively participate in reviewing pull requests and sprint
+                  planning.
+                </li>
+              </li>
+              {/* </li> */}
+              <li>
+                Tech/Stack: Typescript, Python, React, MaterialUI, Ruby on
+                Rails, Node, GraphQL, Pandas, Numpy, Kubernetes, Docker,
+                Cypress, CircleCI, Git, Asana.
               </li>
             </ul>
           </section>
