@@ -6,9 +6,32 @@ export let ProfessionalCard = () => {
       <h2 className="h2-cv">Professional</h2>
 
       <Card flat>
+<div style={{ padding: "15px" }}>
+          <h3>
+            02/2024–Present |{" "}
+            <span>
+              <a target="_blank" href="https://dtu.dk/">
+                Danmarks Tekniske Universitet
+              </a>{" "}
+              | Kongens Lyngby, Denmark
+            </span>
+          </h3>
+
+          <section>
+            <b>PhD Candidate / Researcher</b>
+            <ul>
+              {/* <li> */}
+              Working in Ultra High Vacuum (UHV) surface physics. My primary
+              work is on building a new UHV instrument to be used in nanoparticle catalysis experiments. Write Python software for controlling hardware interfaces, implementing
+              data acquisition and analysis software, and data visualization with best practices.
+              <br />
+            </ul>
+          </section>
+        </div>
+
         <div style={{ padding: "15px" }}>
           <h3>
-            11/2021–Present |{" "}
+            11/2021–12/2023 |{" "}
             <span>
               <a target="_blank" href="https://www.sonder.com/">
                 Sonder

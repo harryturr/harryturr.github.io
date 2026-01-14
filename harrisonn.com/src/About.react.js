@@ -10,10 +10,13 @@ export let About = () => {
         <img src={me} alt="profile_pic" className="Prof-pic" />
 
         <p>
-          Hi, I'm Harrisonn (with 2 n's), a software developer based in
-          Montreal! <br />
+          Hi, I'm Harrisonn (with 2 n's), a physicist turned software developer based in
+          Copenhagen!
+          Currently I am researching nanocatalysts as a PhD student at Danmarks Tekniske Universitet.
           <br />
-          Currently I am a full stack developer at{" "}
+
+          <br />
+          Previously I was a full stack developer at{" "}
           <a target="_blank" href="https://sonder.com/">
             Sonder
           </a>
@@ -24,6 +27,7 @@ export let About = () => {
           </a>{" "}
           working on building open source and enterprise data visualization
           tools. <br />
+          <br />
           Before that I studied single electron physics while completing my
           Masters degree at{" "}
           <a target="_blank" href="https://spm.physics.mcgill.ca/">

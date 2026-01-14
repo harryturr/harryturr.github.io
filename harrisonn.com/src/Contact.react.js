@@ -21,7 +21,7 @@ export let Contact = () => {
     <Card flat style={{ textAlign: "left", padding: "10px" }}>
       <div style={{ width: "100%" }}>
         <p>
-          Enjoy working in teams where I can challenge myself, learn new tech,
+          I enjoy working in teams where I can challenge myself, learn new tech,
           and continue to grow as a developer.
           <br />
           <br />
@@ -38,8 +38,6 @@ export let Contact = () => {
             target="_blank" href="https://www.linkedin.com/in/harrisonngriffin/"
             text="/in/harrisonngriffin"
           />{" "}
-          <br />
-          <StyledCard href="tel:518-338-5598" text="518 338 5598" />
         </p>
       </div>
     </Card>

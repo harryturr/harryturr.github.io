@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 style={{ paddingTop: "50px", paddingBottom: "25px" }}>
-          Harrisonn Griffin
+          Harrisonn Robert Griffin
         </h1>
         <div>
           {["about", "resume", "contact", "github"].map((i) => {
